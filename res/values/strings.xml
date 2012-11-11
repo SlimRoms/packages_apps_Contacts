@@ -1852,4 +1852,7 @@
          [CHAR LIMIT=NONE] -->
     <string name="action_menu_overflow_description" msgid="2295659037509008453">More options</string>
 
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current dialled contact</string>
+
 </resources>
