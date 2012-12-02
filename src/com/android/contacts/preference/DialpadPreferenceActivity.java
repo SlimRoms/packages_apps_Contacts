@@ -17,14 +17,20 @@
 package com.android.contacts.preference;
 
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
+import android.content.SharedPreferences;
 import android.preference.PreferenceActivity;
 import com.android.contacts.R;
 public class DialpadPreferenceActivity extends PreferenceActivity {
+    public static final String DIRECT_CALL_PREF = "direct_call_pref";
+    private CheckBoxPreference mDirectCall;
+
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.preference_dialpad_options);
+        mDirectCall = (CheckBoxPreference) findPreference("direct_call_pref");
 
     }
 }

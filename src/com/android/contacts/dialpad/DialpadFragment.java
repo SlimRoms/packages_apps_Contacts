@@ -32,6 +32,10 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.hardware.SensorEventListener;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.net.Uri;
@@ -88,6 +92,7 @@ import com.android.contacts.activities.DialtactsActivity;
 import com.android.contacts.dialpad.T9SearchCache.ContactItem;
 import com.android.contacts.dialpad.T9SearchCache.T9Adapter;
 import com.android.contacts.dialpad.T9SearchCache.T9SearchResult;
+import com.android.contacts.preference.DialpadPreferenceActivity;
 import com.android.contacts.util.Constants;
 import com.android.contacts.util.PhoneNumberFormatter;
 import com.android.contacts.util.StopWatch;
@@ -101,7 +106,7 @@ import com.android.phone.HapticFeedback;
 public class DialpadFragment extends Fragment
         implements View.OnClickListener,
         View.OnLongClickListener, View.OnKeyListener,
-        AdapterView.OnItemClickListener, TextWatcher,
+        AdapterView.OnItemClickListener, TextWatcher, SensorEventListener,
         PopupMenu.OnMenuItemClickListener,
         DialpadImageButton.OnPressedListener {
     private static final String TAG = DialpadFragment.class.getSimpleName();
@@ -162,6 +167,13 @@ public class DialpadFragment extends Fragment
     private T9Adapter mT9AdapterTop;
     private ViewSwitcher mT9Flipper;
     private LinearLayout mT9Top;
+
+    private SensorManager mSensorManager;
+    private int SensorOrientationY;
+    private int SensorProximity;
+    private int oldProximity;
+    private boolean initProx;
+    private boolean proxChanged;
 
     /**
      * Regular expression prohibiting manual phone call. Can be empty, which means "no rule".
@@ -293,6 +305,56 @@ public class DialpadFragment extends Fragment
 
         if (state != null) {
             mDigitsFilledByIntent = state.getBoolean(PREF_DIGITS_FILLED_BY_INTENT);
+        }
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+
+        switch (event.sensor.getType()) {
+            case Sensor.TYPE_ORIENTATION:
+                SensorOrientationY = (int) event.values[SensorManager.DATA_Y];
+                break;
+            case Sensor.TYPE_PROXIMITY:
+                int currentProx = (int) event.values[0];
+                if (initProx) {
+                    SensorProximity = currentProx;
+                    initProx = false;
+                } else {
+                    if( SensorProximity > 0 && currentProx == 0){
+                        proxChanged = true;
+                    }
+                }
+                SensorProximity = currentProx;
+                break;
+        }
+        if (rightOrientation(SensorOrientationY) && SensorProximity == 0 && proxChanged ) {
+            if (!isDigitsEmpty()) {
+                mSensorManager.unregisterListener(this, mSensorManager
+                    .getDefaultSensor(Sensor.TYPE_ORIENTATION));
+                mSensorManager.unregisterListener(this,
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY));
+                final String number = mDigits.getText().toString();
+                Intent intent = new Intent(Intent.ACTION_CALL_PRIVILEGED);
+                intent = ContactsUtils.getCallIntent(number,
+                    (getActivity() instanceof DialtactsActivity ?
+                    ((DialtactsActivity)getActivity()).getCallOrigin() : null));
+                startActivity(intent);
+                mClearDigitsOnStop = true;
+                getActivity().finish();
+            }
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+    public boolean rightOrientation(int orientation) {
+        if (orientation < -50 && orientation > -130) {
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -629,6 +691,24 @@ public class DialpadFragment extends Fragment
         stopWatch.lap("bes");
 
         stopWatch.stopAndLog(TAG, 50);
+
+        try {
+            if(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("direct_call_pref", false)) {
+                SensorOrientationY = 0;
+                SensorProximity = 0;
+                proxChanged = false;
+                initProx = true;
+                mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+                mSensorManager.registerListener(this,
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                    SensorManager.SENSOR_DELAY_UI);
+                mSensorManager.registerListener(this,
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY),
+                    SensorManager.SENSOR_DELAY_UI);
+            }
+        } catch (Exception e) {
+            Log.w("ERROR", e.toString());
+        }
     }
 
     @Override
@@ -655,6 +735,17 @@ public class DialpadFragment extends Fragment
         // lookup the last dialed number has completed.
         mLastNumberDialed = EMPTY_NUMBER;  // Since we are going to query again, free stale number.
         SpecialCharSequenceMgr.cleanup();
+
+        try {
+            if(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("direct_call_pref", false)) {
+                mSensorManager.unregisterListener(this,
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION));
+                mSensorManager.unregisterListener(this,
+                    mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY));
+            }
+        } catch (Exception e) {
+            Log.w("ERROR", e.toString());
+        }
     }
 
     @Override

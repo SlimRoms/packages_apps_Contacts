@@ -41,4 +41,9 @@
         android:entries="@array/t9_sort_entries"
         android:entryValues="@array/t9_sort_values"
         android:dialogTitle="@string/t9_sort_title" />
+    <CheckBoxPreference
+        android:key="direct_call_pref"
+        android:title="@string/direct_call_title"
+        android:summary="@string/direct_call_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>
