@@ -104,9 +104,10 @@ import com.android.phone.HapticFeedback;
  * Fragment that displays a twelve-key phone dialpad.
  */
 public class DialpadFragment extends Fragment
-        implements View.OnClickListener,
-        View.OnLongClickListener, View.OnKeyListener,
-        AdapterView.OnItemClickListener, TextWatcher, SensorEventListener,
+        implements View.OnClickListener, View.OnLongClickListener,
+        View.OnKeyListener, AdapterView.OnItemClickListener,
+        AdapterView.OnItemLongClickListener, TextWatcher,
+        SensorEventListener,
         PopupMenu.OnMenuItemClickListener,
         DialpadImageButton.OnPressedListener {
     private static final String TAG = DialpadFragment.class.getSimpleName();
@@ -377,10 +378,12 @@ public class DialpadFragment extends Fragment
         mT9List = (ListView) fragmentView.findViewById(R.id.t9list);
         if (mT9List != null) {
             mT9List.setOnItemClickListener(this);
+            mT9List.setOnItemLongClickListener(this);
         }
         mT9ListTop = (ListView) fragmentView.findViewById(R.id.t9listtop);
         if (mT9ListTop != null) {
             mT9ListTop.setOnItemClickListener(this);
+            mT9ListTop.setOnItemLongClickListener(this);
             mT9ListTop.setTag(new ContactItem());
         }
         mT9Toggle = (ToggleButton) fragmentView.findViewById(R.id.t9toggle);
@@ -1724,6 +1727,26 @@ public class DialpadFragment extends Fragment
                 Log.w(TAG, "onItemClick: unexpected itemId: " + itemId);
                 break;
         }
+    }
+
+    /**
+     * Handle long clicks from mT9List and mT9ListTop
+     */
+    @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
+        long contactId;
+        if (parent == mT9List) {
+            contactId = mT9Adapter.getItem(position).id;
+        } else if (mT9Toggle.getTag() == null) {
+            contactId = mT9AdapterTop.getItem(position).id;
+        } else {
+            return false;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri uri = Uri.withAppendedPath(Contacts.CONTENT_URI, String.valueOf(contactId));
+        intent.setData(uri);
+        startActivity(intent);
+        return true;
     }
 
     /**
