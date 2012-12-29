@@ -49,6 +49,7 @@ import android.provider.Contacts.Intents.Insert;
 import android.provider.Contacts.People;
 import android.provider.Contacts.Phones;
 import android.provider.Contacts.PhonesColumns;
+import android.provider.ContactsContract.Contacts;
 import android.provider.Settings;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.PhoneStateListener;
@@ -1430,6 +1431,7 @@ public class DialpadFragment extends Fragment
                 // contains a *formatted* version of mLastNumberDialed (due to
                 // mTextWatcher) and its length may have changed.
                 mDigits.setSelection(mDigits.getText().length());
+                searchContacts();
             } else {
                 // There's no "last number dialed" or the
                 // background query is still running. There's
