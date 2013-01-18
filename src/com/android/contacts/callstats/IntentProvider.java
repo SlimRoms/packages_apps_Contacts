@@ -38,13 +38,14 @@ public abstract class IntentProvider {
     }
 
     public static IntentProvider getCallStatsDetailIntentProvider(final CallStatsDetails item,
-            final long from, final long to) {
+            final long from, final long to, final boolean byDuration) {
         return new IntentProvider() {
             @Override
             public Intent getIntent(Context context) {
                 Intent intent = item.getIntentWithExtras(context);
                 intent.putExtra("from", from);
                 intent.putExtra("to", to);
+                intent.putExtra("by_duration", byDuration);
                 return intent;
             }
         };
