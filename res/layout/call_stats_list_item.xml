@@ -16,7 +16,7 @@
 -->
 
 <view xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:contacts="http://schemas.android.com/apk/res/com.android.contacts"
+    xmlns:ex="http://schemas.android.com/apk/res/com.android.contacts"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     class="com.android.contacts.callstats.CallStatsListItemView"
@@ -73,10 +73,10 @@
             android:orientation="horizontal"
             android:paddingEnd="4dp"
             android:paddingStart="4dp"
-            contacts:backgroundColor="@color/call_stats_bar_background"
-            contacts:blueColor="@color/call_stats_incoming"
-            contacts:greenColor="@color/call_stats_outgoing"
-            contacts:redColor="@color/call_stats_missed" />
+            ex:backgroundColor="@color/call_stats_bar_background"
+            ex:blueColor="@color/call_stats_incoming"
+            ex:greenColor="@color/call_stats_outgoing"
+            ex:redColor="@color/call_stats_missed" />
 
         <LinearLayout
             android:layout_width="wrap_content"

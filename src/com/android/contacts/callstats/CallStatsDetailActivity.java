@@ -51,6 +51,7 @@ public class CallStatsDetailActivity extends Activity {
 
     private TextView mHeaderTextView;
     private TextView mTotalText;
+    private TextView mTotalTimeText;
     private TextView mInText;
     private TextView mInText2;
     private TextView mOutText;
@@ -90,6 +91,7 @@ public class CallStatsDetailActivity extends Activity {
 
         mHeaderTextView = (TextView) findViewById(R.id.header_text);
         mTotalText = (TextView) findViewById(R.id.total);
+        mTotalTimeText = (TextView) findViewById(R.id.total_time);
         mInText = (TextView) findViewById(R.id.in_line_one);
         mInText2 = (TextView) findViewById(R.id.in_line_two);
         mOutText = (TextView) findViewById(R.id.out_line_one);
@@ -142,8 +144,10 @@ public class CallStatsDetailActivity extends Activity {
 
         boolean byDuration = getIntent().getBooleanExtra("by_duration", true);
 
-        mTotalText.setText(getString(R.string.call_stats_header_total_details,
-                CallStatsDetailHelper.getDurationString(mResources, mData.getFullDuration(), true)));
+        mTotalText.setText(getString(R.string.call_stats_header_total_callsonly,
+                CallStatsDetailHelper.getCallCountString(mResources, mData.getTotalCount())));
+        mTotalTimeText.setText(CallStatsDetailHelper.getDurationString(
+                    mResources, mData.getFullDuration(), true));
 
         if (mData.inDuration != 0) {
             int percent = byDuration

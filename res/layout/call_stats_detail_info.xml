@@ -29,12 +29,36 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/secondary_text_color" />
 
-    <TextView
-        android:id="@+id/total"
+    <LinearLayout
+        android:id="@+id/total_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/date_filter"
-        android:layout_marginBottom="@dimen/call_log_icon_margin"
+        android:layout_marginBottom="@dimen/call_log_icon_margin" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_call_inout_holo_dark" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@id/date_filter"
+            android:layout_marginLeft="@dimen/call_log_icon_margin"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/secondary_text_color" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_container"
+        android:layout_marginBottom="@dimen/call_log_inner_margin"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/secondary_text_color" />
 
@@ -44,14 +68,14 @@
         android:layout_height="@dimen/call_stats_details_chart_size"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_below="@id/total" />
+        android:layout_below="@id/total_container" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/pie_chart"
-        android:layout_below="@id/total"
+        android:layout_below="@id/total_time"
         android:divider="?android:attr/dividerHorizontal"
         android:orientation="vertical"
         android:showDividers="middle" >

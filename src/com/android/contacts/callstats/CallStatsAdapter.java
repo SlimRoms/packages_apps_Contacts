@@ -213,7 +213,7 @@ class CallStatsAdapter extends ArrayAdapter<CallStatsDetails>
 
         Collections.sort(mAllItems, sortByDuration ? mDurationComparator : mCountComparator);
         float totalValue = sortByDuration ? getTotalDuration() : getTotalCount();
-        long firstValue = -1;
+        float firstValue = -1;
 
         for (CallStatsDetails item : mAllItems) {
             long value = sortByDuration
@@ -226,8 +226,8 @@ class CallStatsAdapter extends ArrayAdapter<CallStatsDetails>
 
             if (firstValue < 0) firstValue = value;
 
-            mRatioMap.add((float) value / (float) firstValue);
-            mPercentageMap.add((float) value * 100F / (float) totalValue);
+            mRatioMap.add((float) value / firstValue);
+            mPercentageMap.add((float) value * 100F / totalValue);
             add(item);
         }
 

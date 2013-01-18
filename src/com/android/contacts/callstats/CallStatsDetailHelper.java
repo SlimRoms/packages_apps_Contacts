@@ -76,14 +76,15 @@ public class CallStatsDetailHelper {
         }
 
         float in = 0, out = 0, missed = 0;
+        float full = byDuration ? details.getFullDuration() : details.getTotalCount();
 
         if (type == CallStatsQueryHandler.CALL_TYPE_ALL) {
             in = byDuration
-                    ? details.getDurationPercentage(Calls.INCOMING_TYPE) * ratio / 100F
-                    : details.getCountPercentage(Calls.INCOMING_TYPE) * ratio / 100F;
+                    ? details.getRequestedDuration(Calls.INCOMING_TYPE) * ratio / full
+                    : details.getRequestedCount(Calls.INCOMING_TYPE) * ratio / full;
             out = byDuration
-                    ? details.getDurationPercentage(Calls.OUTGOING_TYPE) * ratio / 100F
-                    : details.getCountPercentage(Calls.OUTGOING_TYPE) * ratio / 100F;
+                    ? details.getRequestedDuration(Calls.OUTGOING_TYPE) * ratio / full
+                    : details.getRequestedCount(Calls.OUTGOING_TYPE) * ratio / full;
         } else if (type == Calls.INCOMING_TYPE) {
             in = ratio;
         } else if (type == Calls.OUTGOING_TYPE) {
@@ -91,7 +92,7 @@ public class CallStatsDetailHelper {
         }
 
         if (!byDuration) {
-            missed = details.getCountPercentage(Calls.MISSED_TYPE) * ratio / 100F;
+            missed = details.getRequestedCount(Calls.MISSED_TYPE) * ratio / full;
         } else if (type == Calls.MISSED_TYPE) {
             missed = ratio;
         }
