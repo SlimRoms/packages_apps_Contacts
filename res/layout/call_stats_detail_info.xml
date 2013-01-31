@@ -27,13 +27,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginBottom="@dimen/call_log_icon_margin"
         android:textColor="@color/secondary_text_color" />
 
     <LinearLayout
         android:id="@+id/total_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/call_log_icon_margin" >
+        android:layout_marginBottom="@dimen/call_log_icon_margin"
+        android:layout_below="@id/date_filter" >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -42,7 +44,7 @@
             android:src="@drawable/ic_call_inout_holo_dark" />
 
         <TextView
-            android:id="@+id/total"
+            android:id="@+id/total_summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -54,7 +56,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/total_time"
+        android:id="@+id/total_duration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/total_container"
@@ -68,14 +70,14 @@
         android:layout_height="@dimen/call_stats_details_chart_size"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_below="@id/total_container" />
+        android:layout_below="@id/total_duration" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/pie_chart"
-        android:layout_below="@id/total_time"
+        android:layout_below="@id/total_duration"
         android:divider="?android:attr/dividerHorizontal"
         android:orientation="vertical"
         android:showDividers="middle" >
@@ -99,7 +101,7 @@
                     android:src="@drawable/ic_call_incoming_holo_dark" />
 
                 <TextView
-                    android:id="@+id/in_line_one"
+                    android:id="@+id/in_summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -110,7 +112,14 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/in_line_two"
+                android:id="@+id/in_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/secondary_text_color" />
+
+            <TextView
+                android:id="@+id/in_duration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -137,7 +146,7 @@
                     android:src="@drawable/ic_call_outgoing_holo_dark" />
 
                 <TextView
-                    android:id="@+id/out_line_one"
+                    android:id="@+id/out_summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -148,7 +157,14 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/out_line_two"
+                android:id="@+id/out_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/secondary_text_color" />
+
+            <TextView
+                android:id="@+id/out_duration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -160,23 +176,36 @@
             android:id="@+id/missed_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/out_container"
             android:layout_marginTop="@dimen/call_log_icon_margin"
-            android:orientation="horizontal" >
+            android:orientation="vertical" >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_call_missed_holo_dark" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_call_missed_holo_dark" />
+
+                <TextView
+                    android:id="@+id/missed_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/call_log_icon_margin"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/secondary_text_color" />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/missed_line_one"
+                android:id="@+id/missed_count"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/call_log_icon_margin"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/secondary_text_color" />
+
         </LinearLayout>
 
     </LinearLayout>

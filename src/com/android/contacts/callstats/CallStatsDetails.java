@@ -17,47 +17,27 @@
 
 package com.android.contacts.callstats;
 
-import android.content.Intent;
-import android.content.Context;
 import android.net.Uri;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.provider.CallLog.Calls;
 import android.util.Log;
 
 import com.android.contacts.CallDetailHeader;
 import com.android.contacts.calllog.ContactInfo;
-import com.android.contacts.util.UriUtils;
 
 /**
  * Class to store statistical details for a given contact/number.
  */
-public class CallStatsDetails implements CallDetailHeader.Data {
-
-    private static final String TAG = "CallStatsDetails";
-    private static final String NUMBER = "number";
-    private static final String F_NUMBER = "f_number";
-    private static final String C_ISO = "c_iso";
-    private static final String GEOCODE = "geocode";
-    private static final String NAME = "name";
-    private static final String DATE = "date";
-    private static final String NUM_TYPE = "num_type";
-    private static final String NUM_LABEL = "num_label";
-    private static final String C_URI = "c_uri";
-    private static final String PHOTO_ID = "photo_id";
-    private static final String PHOTO_URI = "photo_uri";
-    private static final String IN_DUR = "in_dur";
-    private static final String OUT_DUR = "out_dur";
-    private static final String INCOMING = "incoming";
-    private static final String OUTGOING = "outgoing";
-    private static final String MISSED = "missed";
-
-    public final CharSequence number;
-    public CharSequence formattedNumber;
+public class CallStatsDetails implements CallDetailHeader.Data, Parcelable {
+    public final String number;
+    public String formattedNumber;
     public final String countryIso;
     public final String geocode;
     public final long date;
-    public CharSequence name;
+    public String name;
     public int numberType;
-    public CharSequence numberLabel;
+    public String numberLabel;
     public Uri contactUri;
     public Uri photoUri;
     public long photoId;
@@ -69,43 +49,15 @@ public class CallStatsDetails implements CallDetailHeader.Data {
 
     public CallStatsDetails(CharSequence number, ContactInfo info,
             String countryIso, String geocode, long date) {
-        this.number = number;
+        this.number = number.toString();
         this.countryIso = countryIso;
         this.geocode = geocode;
-        this.contactUri = info.lookupUri;
         this.date = date;
 
         this.inDuration = this.outDuration = 0;
         this.incomingCount = this.outgoingCount = this.missedCount = 0;
 
         updateFromInfo(info);
-    }
-
-    /**
-     * Used when both contact information and initial call statistics are
-     * available
-     */
-    public CallStatsDetails(CharSequence number, CharSequence formattedNumber,
-            String countryIso, String geocode, long date, CharSequence name,
-            int numberType, CharSequence numberLabel, Uri contactUri,
-            Uri photoUri, long photoId, long inDuration, long outDuration,
-            int incomingCount, int outgoingCount, int missedCount) {
-        this.number = number;
-        this.formattedNumber = formattedNumber;
-        this.countryIso = countryIso;
-        this.geocode = geocode;
-        this.date = date;
-        this.name = name;
-        this.numberType = numberType;
-        this.numberLabel = numberLabel;
-        this.contactUri = contactUri;
-        this.photoUri = photoUri;
-        this.photoId = photoId;
-        this.inDuration = inDuration;
-        this.outDuration = outDuration;
-        this.incomingCount = incomingCount;
-        this.outgoingCount = outgoingCount;
-        this.missedCount = missedCount;
     }
 
     @Override
@@ -140,6 +92,7 @@ public class CallStatsDetails implements CallDetailHeader.Data {
         this.photoId = info.photoId;
         this.photoUri = info.photoUri;
         this.formattedNumber = info.formattedNumber;
+        this.contactUri = info.lookupUri;
         this.photoUri = info.photoUri;
         this.photoId = info.photoId;
     }
@@ -178,60 +131,6 @@ public class CallStatsDetails implements CallDetailHeader.Data {
         return Math.round((float) count * 100F / getTotalCount());
     }
 
-    /** Used to generate an intent to later recreate this item */
-    public Intent getIntentWithExtras(Context context) {
-        Intent intent = new Intent(context, CallStatsDetailActivity.class);
-        intent.putExtra(NUMBER, number);
-        intent.putExtra(F_NUMBER, formattedNumber);
-        intent.putExtra(C_ISO, countryIso);
-        intent.putExtra(GEOCODE, geocode);
-        intent.putExtra(DATE, date);
-        intent.putExtra(NAME, name);
-        intent.putExtra(NUM_TYPE, numberType);
-        intent.putExtra(NUM_LABEL, numberLabel);
-        intent.putExtra(PHOTO_ID, photoId);
-        intent.putExtra(IN_DUR, inDuration);
-        intent.putExtra(OUT_DUR, outDuration);
-        intent.putExtra(INCOMING, incomingCount);
-        intent.putExtra(OUTGOING, outgoingCount);
-        intent.putExtra(MISSED, missedCount);
-        try {
-            intent.putExtra(C_URI, contactUri.toString());
-        } catch (NullPointerException ex) {
-            Log.i(TAG, "Could not add contact uri");
-        }
-        try {
-            intent.putExtra(PHOTO_URI, photoUri.toString());
-        } catch (NullPointerException ex) {
-            Log.i(TAG, "Could not add photo uri");
-        }
-        return intent;
-    }
-
-    /** Used to recreate an object from an intent */
-    public static CallStatsDetails reCreateFromIntent(Intent intent) {
-        final String number = intent.getStringExtra(NUMBER);
-        final String formattedNumber = intent.getStringExtra(F_NUMBER);
-        final String countryIso = intent.getStringExtra(C_ISO);
-        final String geocode = intent.getStringExtra(GEOCODE);
-        final long date = intent.getLongExtra(DATE, 0);
-        final String name = intent.getStringExtra(NAME);
-        final int numType = intent.getIntExtra(NUM_TYPE, 0);
-        final String numLabel = intent.getStringExtra(NUM_LABEL);
-        final Uri contacturi = UriUtils.parseUriOrNull(intent.getStringExtra(C_URI));
-        final Uri photouri = UriUtils.parseUriOrNull(intent.getStringExtra(PHOTO_URI));
-        final long photoid = intent.getLongExtra(PHOTO_ID, 0);
-        final long inDuration = intent.getLongExtra(IN_DUR, 0);
-        final long outDuration = intent.getLongExtra(OUT_DUR, 0);
-        final int incoming = intent.getIntExtra(INCOMING, 0);
-        final int outgoing = intent.getIntExtra(OUTGOING, 0);
-        final int missed = intent.getIntExtra(MISSED, 0);
-
-        return new CallStatsDetails(number, formattedNumber, countryIso, geocode, date,
-                name, numType, numLabel, contacturi, photouri, photoid,
-                inDuration, outDuration, incoming, outgoing, missed);
-    }
-
     public long getRequestedDuration(int type) {
         switch (type) {
             case Calls.INCOMING_TYPE:
@@ -257,6 +156,7 @@ public class CallStatsDetails implements CallDetailHeader.Data {
                 return getTotalCount();
         }
     }
+
     public void mergeWith(CallStatsDetails other) {
         this.inDuration += other.inDuration;
         this.outDuration += other.outDuration;
@@ -264,4 +164,62 @@ public class CallStatsDetails implements CallDetailHeader.Data {
         this.outgoingCount += other.outgoingCount;
         this.missedCount += other.missedCount;
     }
+
+    /* Parcelable interface */
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeString(number);
+        out.writeString(formattedNumber);
+        out.writeString(countryIso);
+        out.writeString(geocode);
+        out.writeLong(date);
+        out.writeString(name);
+        out.writeInt(numberType);
+        out.writeString(numberLabel);
+        out.writeParcelable(contactUri, flags);
+        out.writeParcelable(photoUri, flags);
+        out.writeLong(photoId);
+        out.writeLong(inDuration);
+        out.writeLong(outDuration);
+        out.writeInt(incomingCount);
+        out.writeInt(outgoingCount);
+        out.writeInt(missedCount);
+    }
+
+    public static final Parcelable.Creator<CallStatsDetails> CREATOR =
+            new Parcelable.Creator<CallStatsDetails>() {
+        public CallStatsDetails createFromParcel(Parcel in) {
+             return new CallStatsDetails(in);
+         }
+
+         public CallStatsDetails[] newArray(int size) {
+             return new CallStatsDetails[size];
+         }
+     };
+
+    private CallStatsDetails (Parcel in) {
+        number = in.readString();
+        formattedNumber = in.readString();
+        countryIso = in.readString();
+        geocode = in.readString();
+        date = in.readLong();
+        name = in.readString();
+        numberType = in.readInt();
+        numberLabel = in.readString();
+        contactUri = in.readParcelable(null);
+        photoUri = in.readParcelable(null);
+        photoId = in.readLong();
+        inDuration = in.readLong();
+        outDuration = in.readLong();
+        incomingCount = in.readInt();
+        outgoingCount = in.readInt();
+        missedCount = in.readInt();
+    }
+
 }

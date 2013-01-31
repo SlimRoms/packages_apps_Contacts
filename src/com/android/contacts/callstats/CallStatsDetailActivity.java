@@ -44,21 +44,28 @@ import com.android.contacts.calllog.PhoneNumberHelper;
 public class CallStatsDetailActivity extends Activity {
     private static final String TAG = "CallStatsDetailActivity";
 
+    public static final String EXTRA_DETAILS = "details";
+    public static final String EXTRA_FROM = "from";
+    public static final String EXTRA_TO = "to";
+    public static final String EXTRA_BY_DURATION = "by_duration";
+
     private CallStatsDetailHelper mCallStatsDetailHelper;
     private ContactInfoHelper mContactInfoHelper;
     private CallDetailHeader mCallDetailHeader;
     private Resources mResources;
 
     private TextView mHeaderTextView;
-    private TextView mTotalText;
-    private TextView mTotalTimeText;
-    private TextView mInText;
-    private TextView mInText2;
-    private TextView mOutText;
-    private TextView mOutText2;
-    private TextView mMissedText;
+    private TextView mTotalSummary;
+    private TextView mTotalDuration;
+    private TextView mInSummary;
+    private TextView mInCount;
+    private TextView mInDuration;
+    private TextView mOutSummary;
+    private TextView mOutCount;
+    private TextView mOutDuration;
+    private TextView mMissedSummary;
+    private TextView mMissedCount;
     private PieChartView mPieChart;
-
 
     private CallStatsDetails mData;
     private String mNumber = null;
@@ -90,25 +97,28 @@ public class CallStatsDetailActivity extends Activity {
         mContactInfoHelper = new ContactInfoHelper(this, ContactsUtils.getCurrentCountryIso(this));
 
         mHeaderTextView = (TextView) findViewById(R.id.header_text);
-        mTotalText = (TextView) findViewById(R.id.total);
-        mTotalTimeText = (TextView) findViewById(R.id.total_time);
-        mInText = (TextView) findViewById(R.id.in_line_one);
-        mInText2 = (TextView) findViewById(R.id.in_line_two);
-        mOutText = (TextView) findViewById(R.id.out_line_one);
-        mOutText2 = (TextView) findViewById(R.id.out_line_two);
-        mMissedText = (TextView) findViewById(R.id.missed_line_one);
+        mTotalSummary = (TextView) findViewById(R.id.total_summary);
+        mTotalDuration = (TextView) findViewById(R.id.total_duration);
+        mInSummary = (TextView) findViewById(R.id.in_summary);
+        mInCount = (TextView) findViewById(R.id.in_count);
+        mInDuration = (TextView) findViewById(R.id.in_duration);
+        mOutSummary = (TextView) findViewById(R.id.out_summary);
+        mOutCount = (TextView) findViewById(R.id.out_count);
+        mOutDuration = (TextView) findViewById(R.id.out_duration);
+        mMissedSummary = (TextView) findViewById(R.id.missed_summary);
+        mMissedCount = (TextView) findViewById(R.id.missed_count);
         mPieChart = (PieChartView) findViewById(R.id.pie_chart);
 
         configureActionBar();
         Intent launchIntent = getIntent();
-        mData = CallStatsDetails.reCreateFromIntent(launchIntent);
+        mData = (CallStatsDetails) launchIntent.getParcelableExtra(EXTRA_DETAILS);
 
         TextView dateFilterView = (TextView) findViewById(R.id.date_filter);
-        long filterFrom = launchIntent.getLongExtra("from", -1);
+        long filterFrom = launchIntent.getLongExtra(EXTRA_FROM, -1);
         if (filterFrom == -1) {
             dateFilterView.setVisibility(View.GONE);
         } else {
-            long filterTo = launchIntent.getLongExtra("to", -1);
+            long filterTo = launchIntent.getLongExtra(EXTRA_TO, -1);
             dateFilterView.setText(DateUtils.formatDateRange(
                     this, filterFrom, filterTo, DateUtils.FORMAT_ABBREV_ALL));
         }
@@ -142,21 +152,22 @@ public class CallStatsDetailActivity extends Activity {
         mPieChart.setOriginAngle(240);
         mPieChart.removeAllSlices();
 
-        boolean byDuration = getIntent().getBooleanExtra("by_duration", true);
+        boolean byDuration = getIntent().getBooleanExtra(EXTRA_BY_DURATION, true);
 
-        mTotalText.setText(getString(R.string.call_stats_header_total_callsonly,
+        mTotalSummary.setText(getString(R.string.call_stats_header_total_callsonly,
                 CallStatsDetailHelper.getCallCountString(mResources, mData.getTotalCount())));
-        mTotalTimeText.setText(CallStatsDetailHelper.getDurationString(
+        mTotalDuration.setText(CallStatsDetailHelper.getDurationString(
                     mResources, mData.getFullDuration(), true));
 
-        if (mData.inDuration != 0) {
+        if (shouldDisplay(Calls.INCOMING_TYPE, byDuration)) {
             int percent = byDuration
                     ? mData.getDurationPercentage(Calls.INCOMING_TYPE)
                     : mData.getCountPercentage(Calls.INCOMING_TYPE);
 
-            mInText.setText(getString(R.string.call_stats_incoming, percent,
-                    CallStatsDetailHelper.getCallCountString(mResources, mData.incomingCount)));
-            mInText2.setText(CallStatsDetailHelper.getDurationString(
+            mInSummary.setText(getString(R.string.call_stats_incoming, percent));
+            mInCount.setText(CallStatsDetailHelper.getCallCountString(
+                    mResources, mData.incomingCount));
+            mInDuration.setText(CallStatsDetailHelper.getDurationString(
                     mResources, mData.inDuration, true));
             mPieChart.addSlice(byDuration ? mData.inDuration : mData.incomingCount,
                     mResources.getColor(R.color.call_stats_incoming));
@@ -164,14 +175,15 @@ public class CallStatsDetailActivity extends Activity {
             findViewById(R.id.in_container).setVisibility(View.GONE);
         }
 
-        if (mData.outDuration != 0) {
+        if (shouldDisplay(Calls.OUTGOING_TYPE, byDuration)) {
             int percent = byDuration
                     ? mData.getDurationPercentage(Calls.OUTGOING_TYPE)
                     : mData.getCountPercentage(Calls.OUTGOING_TYPE);
 
-            mOutText.setText(getString(R.string.call_stats_outgoing, percent,
-                    CallStatsDetailHelper.getCallCountString(mResources, mData.outgoingCount)));
-            mOutText2.setText(CallStatsDetailHelper.getDurationString(
+            mOutSummary.setText(getString(R.string.call_stats_outgoing, percent));
+            mOutCount.setText(CallStatsDetailHelper.getCallCountString(
+                    mResources, mData.outgoingCount));
+            mOutDuration.setText(CallStatsDetailHelper.getDurationString(
                     mResources, mData.outDuration, true));
             mPieChart.addSlice(byDuration ? mData.outDuration : mData.outgoingCount,
                     mResources.getColor(R.color.call_stats_outgoing));
@@ -179,23 +191,33 @@ public class CallStatsDetailActivity extends Activity {
             findViewById(R.id.out_container).setVisibility(View.GONE);
         }
 
-        if (mData.missedCount != 0) {
+        if (shouldDisplay(Calls.MISSED_TYPE, false)) {
             final String missedCount =
                     CallStatsDetailHelper.getCallCountString(mResources, mData.missedCount);
 
             if (byDuration) {
-                mMissedText.setText(getString(R.string.call_stats_missed_countonly, missedCount));
+                mMissedSummary.setText(getString(R.string.call_stats_missed));
             } else {
-                mMissedText.setText(getString(R.string.call_stats_missed,
-                        mData.getCountPercentage(Calls.MISSED_TYPE), missedCount));
+                mMissedSummary.setText(getString(R.string.call_stats_missed_percent,
+                        mData.getCountPercentage(Calls.MISSED_TYPE)));
                 mPieChart.addSlice(mData.missedCount, mResources.getColor(R.color.call_stats_missed));
             }
+            mMissedCount.setText(CallStatsDetailHelper.getCallCountString(
+                    mResources, mData.missedCount));
         } else {
             findViewById(R.id.missed_container).setVisibility(View.GONE);
         }
 
         mPieChart.generatePath();
         findViewById(R.id.call_stats_detail).setVisibility(View.VISIBLE);
+    }
+
+    private boolean shouldDisplay(int type, boolean byDuration) {
+        if (byDuration) {
+            return mData.getRequestedDuration(type) != 0;
+        } else {
+            return mData.getRequestedCount(type) != 0;
+        }
     }
 
     @Override

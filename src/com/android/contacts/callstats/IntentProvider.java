@@ -42,10 +42,11 @@ public abstract class IntentProvider {
         return new IntentProvider() {
             @Override
             public Intent getIntent(Context context) {
-                Intent intent = item.getIntentWithExtras(context);
-                intent.putExtra("from", from);
-                intent.putExtra("to", to);
-                intent.putExtra("by_duration", byDuration);
+                Intent intent = new Intent(context, CallStatsDetailActivity.class);
+                intent.putExtra(CallStatsDetailActivity.EXTRA_DETAILS, item);
+                intent.putExtra(CallStatsDetailActivity.EXTRA_FROM, from);
+                intent.putExtra(CallStatsDetailActivity.EXTRA_TO, to);
+                intent.putExtra(CallStatsDetailActivity.EXTRA_BY_DURATION, byDuration);
                 return intent;
             }
         };
