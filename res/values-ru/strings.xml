@@ -18,6 +18,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="launcherDialer" msgid="8636288196618486553">"Телефон"</string>
     <string name="people" msgid="1048457247435785074">"Контакты"</string>
+    <string name="t9_loading">Загрузка\u2026</string>
     <string name="contactsList" msgid="8661624236494819731">"Контакты"</string>
     <string name="shortcutContact" msgid="749243779392912958">"Контакт"</string>
     <string name="shortcutDialContact" msgid="746622101599186779">"Быстрый звонок"</string>
@@ -179,6 +180,8 @@
     <string name="dialer_returnToInCallScreen" msgid="3719386377550913067">"Вернуться к ожидающему вызову"</string>
     <string name="dialer_addAnotherCall" msgid="4205688819890074468">"+ вызов"</string>
     <string name="callDetailTitle" msgid="5340227785196217938">"Сведения о вызове"</string>
+    <!-- Title bar for call stat detail screen -->
+    <string name="callStatsDetailTitle">Статистические сведения о вызове</string>
     <string name="toast_call_detail_error" msgid="7200975244804730096">"Не удается получить сведения о вызове."</string>
     <string name="type_incoming" msgid="6502076603836088532">"Входящий вызов"</string>
     <string name="type_outgoing" msgid="343108709599392641">"Исходящий вызов"</string>
@@ -280,6 +283,8 @@
     <string name="add_wait" msgid="3360818652790319634">"Добавить паузу"</string>
     <string name="call_disambig_title" msgid="4392886850104795739">"Выбор номера"</string>
     <string name="call_settings" msgid="7666474782093693667">"Настройки"</string>
+    <string name="call_stats">Статистика вызовов</string>
+    <string name="call_stats_refresh">Обновить</string>
     <string name="sms_disambig_title" msgid="5846266399240630846">"Выбор номера"</string>
     <string name="make_primary" msgid="5829291915305113983">"Запомнить выбранное"</string>
     <string name="quickcontact_missing_app" msgid="358168575340921552">"Действие не поддерживается ни в одном приложении."</string>
@@ -397,6 +402,7 @@
     <string name="recent" msgid="2659189233141493004">"Недавние"</string>
     <string name="recent_updates" msgid="4267258535615860710">"Недавние обновления"</string>
     <string name="account_type_format" msgid="718948015590343010">"Контакт <xliff:g id="SOURCE">%1$s</xliff:g>"</string>
+	<string name="from_account_format"><xliff:g id="source" example="user@gmail.com">%1$s</xliff:g></string>
     <!-- no translation found for from_account_format (4469138575127580203) -->
     <skip />
     <string name="use_photo_as_primary" msgid="8807110122951157246">"Использовать эту фотографию"</string>
@@ -455,6 +461,7 @@
     <string name="custom_list_filter" msgid="7836035257402013957">"Выберите группы контактов"</string>
     <string name="contact_list_loading" msgid="5488620820563977329">"Загрузка..."</string>
     <string name="activity_title_settings" msgid="5464130076132770781">"Настройки"</string>
+    <string name="activity_title_call_stats">Статистика вызовов</string>
     <string name="activity_title_contacts_filter" msgid="8275542497615516969">"Фильтр контактов"</string>
     <string name="menu_settings" msgid="377929915873428211">"Настройки"</string>
     <string name="menu_help" msgid="5123887102216637725">"Справка"</string>
@@ -568,6 +575,78 @@
     <string name="dialog_voicemail_airplane_mode_message" msgid="530922773669546093">"Сначала отключите режим полета."</string>
     <string name="menu_export_database" msgid="2659719297530170820">"Экспорт файлов базы данных"</string>
     <string name="action_menu_overflow_description" msgid="2303272250613084574">"Ещё"</string>
+    <string name="direct_call_title">Быстрый вызов</string>
+    <string name="direct_call_summary">Сразу набирать номер абонента при нажатии на него, не используя кнопку вызова</string>
+
+    <string name="call_stats_nav_all">Все</string>
+    <string name="call_stats_nav_incoming">Входящие</string>
+    <string name="call_stats_nav_outgoing">Исходящие</string>
+    <string name="call_stats_nav_missed">Пропущенные</string>
+    <string name="call_stats_incoming">Входящих: <xliff:g id="percent">%d</xliff:g>%%</string>
+    <string name="call_stats_outgoing">Исходящих: <xliff:g id="percent">%d</xliff:g>%%</string>
+    <string name="call_stats_missed">Пропущенные</string>
+    <string name="call_stats_missed_percent">Пропущенных: <xliff:g id="percent">%d</xliff:g>%%</string>
+    <string name="call_stats_header_total">Всего: <xliff:g id="call_count">%s</xliff:g>, <xliff:g id="duration">%s</xliff:g></string>
+    <string name="call_stats_header_total_callsonly">Всего: <xliff:g id="call_count">%s</xliff:g></string>
+    <string name="call_stats_filter_from">Начальная дата</string>
+    <string name="call_stats_filter_to">Конечная дата</string>
+    <string name="call_stats_filter_picker_title">Диапазон фильтра</string>
+
+    <string name="date_quick_selection">Быстрый выбор</string>
+    <string name="date_qs_currentmonth">Текущий месяц</string>
+    <string name="date_qs_currentquarter">Текущий квартал</string>
+    <string name="date_qs_currentyear">Текущий год</string>
+    <string name="date_qs_lastweek">Прошлая неделя</string>
+    <string name="date_qs_lastmonth">Прошлый месяц</string>
+    <string name="date_qs_lastquarter">Прошлый квартал</string>
+    <string name="date_qs_lastyear">Прошлый год</string>
+
+    <string name="call_stats_date_filter">Выбрать временной промежуток</string>
+    <string name="call_stats_reset_filter">Сбросить временной промежуток</string>
+    <string name="call_stats_sort_by_duration">Сортировать по длительности вызова</string>
+    <string name="call_stats_sort_by_count">Сортировать по количеству вызовов</string>
+    <!-- 0:           sec
+         1:      min
+         2:      min  sec
+         3: hour
+         4: hour      sec
+         5: hour min
+         6: hour min  sec -->
+    <string-array name="call_stats_duration">
+        <item><xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g> <xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g> <xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g> <xliff:g id="minutes" example="2 mins">%2$s</xliff:g></item>
+         <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g> <xliff:g id="minutes" example="2 mins">%2$s</xliff:g> <xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+    </string-array>
+    <plurals name="hour">
+        <item quantity="one">1 час</item>
+        <item quantity="other">%d час/а/ов</item>
+    </plurals>
+    <plurals name="minute">
+        <item quantity="one">1 мин</item>
+        <item quantity="other">%d мин</item>
+    </plurals>
+    <plurals name="second">
+        <item quantity="one">1 сек</item>
+        <item quantity="other">%d сек</item>
+    </plurals>
+
+    <plurals name="call">
+        <item quantity="one">1 вызов</item>
+        <item quantity="other">%d вызов/а/ов</item>
+    </plurals>
+
+    <!-- Content description for the expand or collapse name fields button.
+         Clicking this button causes the name editor to toggle between showing
+         a single field where the entire name is edited at once, or multiple
+         fields corresponding to each part of the name (Name Prefix, First Name,
+         Middle Name, Last Name, Name Suffix).
+         [CHAR LIMIT=NONE] -->
+    <string name="expand_collapse_name_fields_description">Развернуть/свернуть поле ввода имени</string>
+
     <string name="t9_sort_title">Режим сортировки T9</string>
     <string name="t9_sort_summary">Выберите способ отображения результатов</string>
     <string name="t9_sort_name">Совпадения по имени первыми</string>
