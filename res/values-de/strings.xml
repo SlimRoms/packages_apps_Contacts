@@ -611,12 +611,6 @@
     <string name="date_qs_lastmonth">Letzter Monat</string>
     <string name="date_qs_lastquarter">Letztes Quartal</string>
     <string name="date_qs_lastyear">Letztes Jahr</string>
-
-    <plurals name="call">
-        <item quantity="one">1 Anruf</item>
-        <item quantity="other">%d Anrufe</item>
-    </plurals>
-
     <string-array name="call_stats_duration">
         <item><xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
         <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g></item>
@@ -639,4 +633,16 @@
         <item quantity="one">1 Sekunde</item>
         <item quantity="other">%d Sekunden</item>
     </plurals>
+
+    <plurals name="call">
+        <item quantity="one">1 Anruf</item>
+        <item quantity="other">%d Anrufe</item>
+    </plurals>
+<!-- Content description for the expand or collapse name fields button.
+         Clicking this button causes the name editor to toggle between showing
+         a single field where the entire name is edited at once, or multiple
+         fields corresponding to each part of the name (Name Prefix, First Name,
+         Middle Name, Last Name, Name Suffix).
+         [CHAR LIMIT=NONE] -->
+    <string name="expand_collapse_name_fields_description">Namensfelder auf- oder zuklappen</string>
 </resources>
