@@ -1961,4 +1961,9 @@ connection to the voicemail server is lost. [CHAR LIMIT=64] -->
          Middle Name, Last Name, Name Suffix).
          [CHAR LIMIT=NONE] -->
     <string name="expand_collapse_name_fields_description">Expand or collapse name fields</string>
+
+    <!-- Blacklist functions -->
+    <string name="menu_add_to_blacklist">Add to blacklist</string>
+    <string name="toast_added_to_blacklist">%s added to blacklist.</string>
+
 </resources>
