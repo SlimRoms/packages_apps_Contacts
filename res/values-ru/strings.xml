@@ -646,6 +646,10 @@
          Middle Name, Last Name, Name Suffix).
          [CHAR LIMIT=NONE] -->
     <string name="expand_collapse_name_fields_description">Развернуть/свернуть поле ввода имени</string>
+	
+	<!-- Blacklist functions -->
+	<string name="menu_add_to_blacklist">Добавить в черный список</string>
+	<string name="toast_added_to_blacklist">%s добавлен в черный список.</string>
 
     <string name="t9_sort_title">Режим сортировки T9</string>
     <string name="t9_sort_summary">Выберите способ отображения результатов</string>
