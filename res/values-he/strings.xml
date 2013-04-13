@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="launcherDialer">טלפון</string>
+    <string name="people">אנשים</string>
+    <string name="t9_loading">טוען</string>
+    <string name="t9_sort_title">T9 sorting mode</string>
+    <string name="t9_sort_summary">Choose how to filter T9 results</string>
+    <string name="t9_sort_name">Name matches first</string>
+    <string name="t9_sort_number">Number matches first</string>
+    <string name="t9_state_title">אפשר חייגן T9</string>
+    <string name="t9_state_summary">Enable T9 searching in dialer</string>
+    <string name="t9_dial_click_title">חייג לאיש הקשר הנבחר</string>
+    <string name="t9_dial_click_summary">Dial the selected contact for T9</string>
+    <string name="t9_add_to_contacts">הוסף לאנשי קשר</string>
+    <string name="t9_map_row_2">2abcàáâäåɑæçǽćčá</string>
+    <string name="t9_map_row_3">3defďéèêëě</string>
+    <string name="t9_map_row_4">4ghiíìïîǵ</string>
+    <string name="t9_map_row_5">5jklḱḱĺ</string>
+    <string name="t9_map_row_6">6mnoòóöôøñŋǿḿńňő</string>
+    <string name="t9_map_row_7">7pqrsßɾṕŕśřš</string>
+    <string name="t9_map_row_8">8tuvťúùüûűů</string>
+    <string name="t9_map_row_9">9wxyzýẃźž</string>
+    <string name="contactsList">אנשי קשר</string>
+    <string name="shortcutContact">איש קשר</string>
+    <string name="shortcutDialContact">חיוג ישיר</string>
+    <string name="shortcutMessageContact">הודעה ישירה</string>
+    <string name="shortcutActivityTitle">בחר קיצור דרך לאיש קשר</string>
+    <string name="callShortcutActivityTitle">בחר מספר להתקשר</string>
+    <string name="messageShortcutActivityTitle">בחר מספר להודעה</string>
+    <string name="contactPickerActivityTitle">בחר איש קשר</string>
+    <string name="starredList">כיכב</string>
+    <string name="frequentList">Frequent</string>
+    <string name="strequentList">מועדפים</string>
+    <string name="viewContactTitle">פרטי איש קשר</string>
+    <string name="viewContactDesription">צפה באיש קשר</string>
+    <string name="editContactDescription">ערוך איש קשר</string>
+    <string name="insertContactDescription">צור איש קשר</string>
+    <string name="editGroupDescription">ערוך קבוצה</string>
+    <string name="insertGroupDescription">צור קבוצה</string>
+    <string name="contactDetailAbout">אודות</string>
+    <string name="contactDetailUpdates">עדכונים</string>
+    <string name="searchHint">חפש אנשי קשר</string>
+    <string name="menu_search">חיפוש</string>
+    <string name="menu_newContact">איש קשר חדש</string>
+    <string name="menu_viewContact">צפה באיש קשר</string>
+    <string name="menu_callNumber">חייג <xliff:g id="number">%s</xliff:g></string>
+    <string name="menu_addStar">הוסף למועדפים</string>
+    <string name="menu_removeStar">הסר מן המועדפים</string>
+    <string name="menu_editContact">ערוך</string>
+    <string name="menu_deleteContact">מחק</string>
+    <string name="menu_copy">העתק</string>
+    <string name="menu_create_contact_shortcut">הנח על מסך הבית</string>
+    <string name="menu_call">התקשר לאיש קשר</string>
+    <string name="menu_sendSMS">Text contact</string>
+    <string name="menu_splitAggregate">Separate</string>
+    <string name="menu_editGroup">ערוך</string>
+    <string name="menu_deleteGroup">מחק</string>
+    <string name="menu_new_contact_action_bar">Add Contact</string>
+    <string name="menu_new_group_action_bar">Add Group</string>
+    <string name="splitConfirmation_title">Separate contact?</string>
+    <string name="splitConfirmation">This contact will be separated into multiple contacts.</string>
+    <string name="menu_joinAggregate">Join</string>
+    <string name="titleJoinContactDataWith">Join contacts</string>
+    <string name="blurbJoinContactDataWith">Choose the contact you want to join with <xliff:g id="name">%s</xliff:g>:</string>
+    <string name="showAllContactsJoinItem">Show all contacts</string>
+    <string name="separatorJoinAggregateSuggestions">Suggested contacts</string>
+    <string name="separatorJoinAggregateAll">All contacts</string>
+    <string name="contactsJoinedMessage">Contacts joined</string>
+    <string name="menu_set_ring_tone">Set ringtone</string>
+    <string name="menu_redirect_calls_to_vm">All calls to voicemail</string>
+    <string name="readOnlyContactWarning">You can\'t delete contacts from read-only accounts, but you can hide them in your contacts lists.</string>
+    <string name="readOnlyContactDeleteConfirmation">This contact contains information from multiple accounts. Information from read-only accounts will be hidden in your contacts lists, not deleted.</string>
+    <string name="multipleContactDeleteConfirmation">Deleting this contact will delete information from multiple accounts.</string>
+    <string name="deleteConfirmation">This contact will be deleted.</string>
+    <string name="menu_done">Done</string>
+    <string name="menu_doNotSave">Cancel</string>
+    <string name="menu_discard">Discard</string>
+    <string name="label_notes">Notes</string>
+    <string name="label_sip_address">Internet call</string>
+    <string name="ghostData_company">Company</string>
+    <string name="ghostData_title">Title</string>
+    <string name="invalidContactMessage">The contact doesn\'t exist.</string>
+    <string name="createContactShortcutSuccessful">Contact widget added to Home screen.</string>
+    <string name="pickerNewContactHeader">Create new contact</string>
+    <string name="pickerNewContactText">Create new contact</string>
+    <string name="phoneLabelsGroup">טלפון</string>
+    <string name="emailLabelsGroup">Email</string>
+    <string name="imLabelsGroup">IM</string>
+    <string name="postalLabelsGroup">Address</string>
+    <string name="photoPickerNotFoundText" product="tablet">No pictures are available on the tablet.</string>
+    <string name="photoPickerNotFoundText" product="default">No pictures are available on the tablet.</string>
+    <string name="attach_photo_dialog_title">Contact photo</string>
+    <string name="customLabelPickerTitle">Custom label name</string>
+    <string name="send_to_voicemail_checkbox">Send calls directly to voicemail</string>
+    <string name="removePhoto">Remove photo</string>
+    <string name="noContacts">No contacts.</string>
+    <string name="noGroups">No groups.</string>
+    <string name="noAccounts">To create groups you need an account.</string>
+    <string name="noMatchingContacts">No matching contacts found.</string>
+    <string name="noContactsWithPhoneNumbers">No contacts with phone numbers.</string>
+    <string name="emptyGroup">No people in this group.</string>
+    <string name="addPeopleToGroup">To add some, edit the group.</string>
+    <string name="savingContact">Saving contact\u2026</string>
+    <string name="savingDisplayGroups">Saving display options\u2026</string>
+    <string name="contactSavedToast">Contact saved.</string>
+    <string name="contactSavedErrorToast">Couldn\'t save contact changes.</string>
+    <string name="groupSavedToast">Group saved.</string>
+    <string name="groupSavedErrorToast">Couldn\'t save group changes.</string>
+    <string name="listTotalPhoneContactsZero">No contacts with phone numbers</string>
+    <string name="listTotalAllContactsZero">No contacts.</string>
+    <string name="listTotalAllContactsZeroCustom">No visible contacts.</string>
+    <string name="listTotalAllContactsZeroStarred">No favorites.</string>
+    <string name="listTotalAllContactsZeroGroup">No contacts in <xliff:g id="name" example="Friends">%s</xliff:g></string>
+    <string name="listAllContactsInAccount">Contacts in <xliff:g id="name" example="abc@gmail.com">%s</xliff:g></string>
+    <string name="listSingleContact">Single contact</string>
+    <string name="listCustomView">Contacts in custom view</string>
+    <string name="foundTooManyContacts">More than <xliff:g id="count">%d</xliff:g> found.</string>
+    <string name="listFoundAllContactsZero">No contacts</string>
+    <string name="contactsAllLabel">All contacts</string>
+    <string name="contactsGroupsLabel">Groups</string>
+    <string name="contactsFavoritesLabel">מועדפים</string>
+    <string name="dialerAllContactsLabel">Favorites and all contacts</string>
+    <string name="dialerIconLabel">טלפון</string>
+    <string name="dialer_ui_title">Dialer settings</string>
+    <string name="dialer_ui_orientation_title">Enable sensor orientation</string>
+    <string name="dialer_ui_orientation_summary">Rotate dialer based on sensor</string>
+    <string name="recentCallsIconLabel">Call log</string>
+    <string name="menu_sendTextMessage">Send text message</string>
+    <string name="recentCalls_callNumber">Call <xliff:g id="name">%s</xliff:g></string>
+    <string name="recentCalls_editNumberBeforeCall">Edit number before call</string>
+    <string name="recentCalls_addToContact">הוסף לאנשי קשר</string>
+    <string name="recentCalls_removeFromRecentList">Remove from call log</string>
+    <string name="recentCalls_deleteAll">Clear call log</string>
+    <string name="recentCalls_trashVoicemail">Delete voicemail</string>
+    <string name="recentCalls_shareVoicemail">Share voicemail</string>
+    <string name="recentCalls_empty">Call log is empty.</string>
+    <string name="clearCallLogConfirmation_title">Clear call log?</string>
+    <string name="clearCallLogConfirmation">All your call records will be deleted.</string>
+    <string name="clearCallLogProgress_title">Clearing call log\u2026</string>
+    <string name="clearFrequentsConfirmation_title">Clear frequently contacted?</string>
+    <string name="clearFrequentsConfirmation">You\'ll clear the frequently contacted list in the People and Phone apps, and force email apps to learn your addressing preferences from scratch.</string>
+    <string name="clearFrequentsProgress_title">Clearing frequently contacted\u2026</string>
+    <string name="imei">IMEI</string>
+    <string name="meid">MEID</string>
+    <string name="voicemail">Voicemail</string>
+    <string name="unknown">Unknown</string>
+    <string name="private_num">Private number</string>
+    <string name="payphone">Pay phone</string>
+    <string name="dialerKeyboardHintText">Use keyboard to dial</string>
+    <string name="dialerDialpadHintText">Dial to add a call</string>
+    <string name="simContacts_emptyLoading">Loading from SIM card\u2026</string>
+    <string name="simContacts_title">SIM card contacts</string>
+    <string name="noContactsHelpTextWithSyncForCreateShortcut">"You don't have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)"</string>
+    <string name="noContactsHelpTextForCreateShortcut">"You don't have any contacts to display."</string>
+    <string name="noContactsHelpText" product="tablet">\"You don\'t have any contacts to display.\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/export</b></font> to import contacts from your SIM or SD card\n</li>\"
+        </string>
+    <string name="noContactsHelpText" product="default">\"You don\'t have any contacts to display.\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/export</b></font> to import contacts from your SIM or SD card\n</li>\"
+        </string>
+    <string name="noContactsHelpTextWithSync" product="tablet">\"You don\'t have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Display options</b></font> to change which contacts are visible\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/Export</b></font> to import contacts from your SIM or SD card\n</li>\"
+        </string>
+    <string name="noContactsHelpTextWithSync" product="default">\"You don\'t have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Display options</b></font> to change which contacts are visible\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/Export</b></font> to import contacts from your SIM or SD card\n</li>\"
+        </string>
+    <string name="noContactsNoSimHelpText" product="tablet">\"You don\'t have any contacts to display.\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/Export</b></font> to import contacts from your SD card\n</li>\"
+        </string>
+    <string name="noContactsNoSimHelpText" product="default">\"You don\'t have any contacts to display.\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/Export</b></font> to import contacts from your SD card\n</li>\"
+        </string>
+    <string name="noContactsNoSimHelpTextWithSync" product="tablet">\"You don\'t have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Display options</b></font> to change which contacts are visible\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/Export</b></font> to import contacts from your SD card\n</li>\"
+        </string>
+    <string name="noContactsNoSimHelpTextWithSync" product="default">\"You don\'t have any contacts to display. (If you just added an account, it can take a few minutes to sync contacts.)\n\nTo add contacts, touch <font fgcolor="#ffffffff"><b>Menu</b></font>, then touch:\n
+                \n<li><font fgcolor="#ffffffff"><b>Accounts</b></font> to add or set up an account with contacts you can sync to the tablet\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Display options</b></font> to change which contacts are visible\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>New contact</b></font> to create a new contact from scratch\n</li>
+                \n<li><font fgcolor="#ffffffff"><b>Import/Export</b></font> to import contacts from your SD card\n</li>\"
+        </string>
+    <string name="noFavoritesHelpText">\"You don\'t have any favorites.\n\nTo add a contact to your list of favorites:\n
+                <li>Touch the <b>Contacts</b> tab\n</li>
+                \n<li>Touch the contact you want to add to your favorites\n</li>
+                \n<li>Touch the star next to the contact\'s name\n</li>\"
+        </string>
+    <string name="dialer_useDtmfDialpad">Use touch tone keypad</string>
+    <string name="dialer_returnToInCallScreen">Return to call in progress</string>
+    <string name="dialer_addAnotherCall">Add call</string>
+    <string name="callDetailTitle">Call details</string>
+    <string name="callStatsDetailTitle">Call stat details</string>
+    <string name="toast_call_detail_error">Couldn\'t read details for the requested call.</string>
+    <string name="type_incoming">Incoming call</string>
+    <string name="type_outgoing">Outgoing call</string>
+    <string name="type_missed">Missed call</string>
+    <string name="type_voicemail">Voicemail</string>
+    <string name="actionIncomingCall">Incoming calls</string>
+    <string name="callBack">Call back</string>
+    <string name="callAgain">Call again</string>
+    <string name="returnCall">Return call</string>
+    <string name="callDetailsDurationFormat"><xliff:g id="hours" example="5">%s</xliff:g> hrs <xliff:g id="minutes" example="42">%s</xliff:g> mins <xliff:g id="seconds" example="28">%s</xliff:g> secs</string>
+    <string name="favoritesFrequentContacted">Frequently contacted</string>
+    <string name="favoritesFrequentCalled">Frequently called</string>
+    <string name="add_contact_dlg_message_fmt">Add \"<xliff:g id="email">%s</xliff:g>\" to contacts?</string>
+    <string name="description_image_button_one">one</string>
+    <string name="description_image_button_two">two</string>
+    <string name="description_image_button_three">three</string>
+    <string name="description_image_button_four">four</string>
+    <string name="description_image_button_five">five</string>
+    <string name="description_image_button_six">six</string>
+    <string name="description_image_button_seven">seven</string>
+    <string name="description_image_button_eight">eight</string>
+    <string name="description_image_button_nine">nine</string>
+    <string name="description_image_button_star">star</string>
+    <string name="description_image_button_zero">zero</string>
+    <string name="description_image_button_pound">pound</string>
+    <string name="description_voicemail_button">voicemail</string>
+    <string name="description_search_button">search</string>
+    <string name="description_dial_button">dial</string>
+    <string name="description_delete_button">backspace</string>
+    <string name="description_digits_edittext">number to dial</string>
+    <string name="description_contact_photo">contact photo</string>
+    <string name="description_minus_button">delete</string>
+    <string name="description_plus_button">plus</string>
+    <string name="description_view_contact_detail" msgid="2795575601596468581">צפה באיש קשר</string>
+    <string name="no_sdcard_message" product="nosdcard">No storage was found.</string>
+    <string name="no_sdcard_message" product="default">No storage was found.</string>
+    <string name="import_from_sim">Import from SIM card</string>
+    <string name="import_from_sdcard" product="default">Import from storage</string>
+    <string name="export_to_sdcard" product="default">Export to storage</string>
+    <string name="share_visible_contacts">Share visible contacts</string>
+    <string name="import_one_vcard_string">Import one vCard file</string>
+    <string name="import_multiple_vcard_string">Import multiple vCard files</string>
+    <string name="import_all_vcard_string">Import all vCard files</string>
+    <string name="searching_vcard_message" product="nosdcard">Searching for vCard data in storage\u2026</string>
+    <string name="searching_vcard_message" product="default">Searching for vCard data in storage\u2026</string>
+    <string name="scanning_sdcard_failed_message" product="nosdcard">The storage couldn\'t be scanned. (Reason: \"<xliff:g id="fail_reason">%s</xliff:g>\")</string>
+    <string name="scanning_sdcard_failed_message" product="default">The storage couldn\'t be scanned. (Reason: \"<xliff:g id="fail_reason">%s</xliff:g>\")</string>
+    <string name="fail_reason_io_error">I/O error</string>
+    <string name="fail_reason_low_memory_during_import">Not enough memory. The file may be too large.</string>
+    <string name="fail_reason_vcard_parse_error">Couldn\'t parse vCard for an unexpected reason.</string>
+    <string name="fail_reason_not_supported">The format isn\'t supported.</string>
+    <string name="vcard_import_failed">Couldn\'t import vCard.</string>
+    <string name="import_failure_no_vcard_file" product="nosdcard">No vCard file found in storage.</string>
+    <string name="import_failure_no_vcard_file" product="default">No vCard file found in storage.</string>
+    <string name="fail_reason_failed_to_collect_vcard_meta_info">Couldn\'t collect meta information of given vCard file(s).</string>
+    <string name="fail_reason_failed_to_read_files">One or more files couldn\'t be imported (%s).</string>
+    <string name="fail_reason_unknown">Unknown error.</string>
+    <string name="select_vcard_title">Choose vCard file</string>
+    <string name="caching_vcard_title">Caching</string>
+    <string name="caching_vcard_message">Caching vCard(s) to local temporary storage. The actual import will start soon.</string>
+    <string name="progress_notifier_message">Importing <xliff:g id="current_number">%s</xliff:g>/<xliff:g id="total_number">%s</xliff:g>: <xliff:g id="name" example="Joe Due">%s</xliff:g></string>
+    <string name="importing_vcard_description">Importing <xliff:g id="name" example="Joe Due">%s</xliff:g></string>
+    <string name="reading_vcard_failed_title">Couldn\'t read vCard data</string>
+    <string name="reading_vcard_canceled_title">Reading vCard data canceled</string>
+    <string name="importing_vcard_finished_title">Finished importing vCard <xliff:g id="filename" example="import.vcf">%s</xliff:g></string>
+    <string name="importing_vcard_canceled_title">Importing <xliff:g id="filename" example="import.vcf">%s</xliff:g> canceled</string>
+    <string name="vcard_import_will_start_message"><xliff:g id="filename" example="import.vcf">%s</xliff:g> will be imported shortly.</string>
+    <string name="vcard_import_will_start_message_with_default_name">The file will be imported shortly.</string>
+    <string name="vcard_import_request_rejected_message">vCard import request was rejected. Try again later.</string>
+    <string name="vcard_export_will_start_message"><xliff:g id="filename" example="import.vcf">%s</xliff:g> will be exported shortly.</string>
+    <string name="vcard_export_request_rejected_message">vCard export request was rejected. Try again later.</string>
+    <string name="vcard_unknown_filename">contact</string>
+    <string name="percentage"><xliff:g id="percentage" example="50">%s</xliff:g><xliff:g id="percentsign" example="%">%%</xliff:g></string>
+    <string name="confirm_export_title">Export contacts?</string>
+    <string name="confirm_export_message">Your contact list will be exported to file: <xliff:g id="vcard_filename">%s</xliff:g>.</string>
+    <string name="exporting_contact_failed_title">Couldn\'t export</string>
+    <string name="exporting_contact_failed_message">The contact data wasn\'t exported.\nReason: \"<xliff:g id="fail_reason">%s</xliff:g>\"</string>
+    <string name="fail_reason_no_exportable_contact">There is no exportable contact.</string>
+    <string name="fail_reason_too_many_vcard" product="nosdcard">Too many vCard files are in the storage.</string>
+    <string name="fail_reason_too_many_vcard" product="default">Too many vCard files are in the storage.</string>
+    <string name="fail_reason_too_long_filename">Required filename is too long (\"<xliff:g id="filename">%s</xliff:g>\").</string>
+    <string name="exporting_vcard_finished_title">Finished exporting <xliff:g id="filename" example="export.vcf">%s</xliff:g>.</string>
+    <string name="exporting_vcard_canceled_title">Exporting <xliff:g id="filename" example="export.vcf">%s</xliff:g> canceled.</string>
+    <string name="exporting_contact_list_title">Exporting contact data</string>
+    <string name="exporting_contact_list_message">Your contact data is being exported to: <xliff:g id="file_name">%s</xliff:g>.</string>
+    <string name="fail_reason_could_not_initialize_exporter">Couldn\'t start the exporter: \"<xliff:g id="exact_reason">%s</xliff:g>\".</string>
+    <string name="fail_reason_error_occurred_during_export">An error occurred during export: \"<xliff:g id="exact_reason">%s</xliff:g>\".</string>
+    <string name="composer_failed_to_get_database_infomation">Couldn\'t get database information.</string>
+    <string name="composer_has_no_exportable_contact" product="tablet">There are no exportable contacts. If you do have contacts on your tablet, some data providers may not allow the contacts to be exported from the tablet.</string>
+    <string name="composer_has_no_exportable_contact" product="default">There are no exportable contacts. If you do have contacts on your tablet, some data providers may not allow the contacts to be exported from the tablet.</string>
+    <string name="composer_not_initialized">The vCard composer didn\'t start properly.</string>
+    <string name="fail_reason_could_not_open_file">Couldn\'t open \"<xliff:g id="file_name">%s</xliff:g>": <xliff:g id="exact_reason">%s</xliff:g>.</string>
+    <string name="exporting_contact_list_progress"><xliff:g id="current_number">%s</xliff:g> of <xliff:g id="total_number">%s</xliff:g> contacts</string>
+    <string name="cancel_import_confirmation_message">Cancel import of <xliff:g id="filename" example="import.vcf">%s</xliff:g>?</string>
+    <string name="cancel_export_confirmation_message">Cancel export of <xliff:g id="filename" example="export.vcf">%s</xliff:g>?</string>
+    <string name="cancel_vcard_import_or_export_failed">Couldn\'t cancel vCard import/export</string>
+    <string name="search_settings_description">Names of your contacts</string>
+    <string name="add_2sec_pause">Add 2-sec pause</string>
+    <string name="add_wait">Add wait</string>
+    <string name="call_disambig_title">Choose number</string>
+    <string name="call_settings">Settings</string>
+    <string name="call_stats">Call statistics</string>
+    <string name="call_stats_refresh">Refresh</string>
+    <string name="sms_disambig_title">Choose number</string>
+    <string name="make_primary">Remember this choice</string>
+    <string name="quickcontact_missing_app">No app was found to handle this action.</string>
+    <string name="missing_name">(No name)</string>
+    <string name="menu_accounts">Accounts</string>
+    <string name="menu_clear_frequents">Clear frequents</string>
+    <string name="menu_contacts_filter">Contacts to display</string>
+    <string name="menu_import_export">Import/export</string>
+    <string name="dialog_import_export">Import/export contacts</string>
+    <string name="dialog_import">Import contacts</string>
+    <string name="menu_share">Share</string>
+    <string name="share_via">Share contact via</string>
+    <string name="share_error">This contact can\'t be shared.</string>
+    <string name="nameLabelsGroup">Name</string>
+    <string name="nicknameLabelsGroup">Nickname</string>
+    <string name="organizationLabelsGroup">Organization</string>
+    <string name="websiteLabelsGroup">Website</string>
+    <string name="eventLabelsGroup">Events</string>
+    <string name="relationLabelsGroup">Relationship</string>
+    <string name="groupsLabel">Groups</string>
+    <string name="dialog_new_contact_account">Create contact under account</string>
+    <string name="dialog_new_group_account">Create group under account</string>
+    <string name="menu_sync_remove">Remove sync group</string>
+    <string name="dialog_sync_add">Add sync group</string>
+    <string name="display_more_groups">More groups\u2026</string>
+    <string name="display_ungrouped">All other contacts</string>
+    <string name="display_all_contacts">All contacts</string>
+    <string name="display_warn_remove_ungrouped">Removing \"<xliff:g id="group" example="Starred">%s</xliff:g>\" from sync will also remove any ungrouped contacts from sync.</string>
+    <string name="account_phone" product="tablet">Tablet-only, unsynced</string>
+    <string name="account_phone" product="default">Tablet-only, unsynced</string>
+    <string name="call_custom">Call <xliff:g id="custom">%s</xliff:g></string>
+    <string name="call_home">Call home</string>
+    <string name="call_mobile">Call mobile</string>
+    <string name="call_work">Call work</string>
+    <string name="call_fax_work">Call work fax</string>
+    <string name="call_fax_home">Call home fax</string>
+    <string name="call_pager">Call pager</string>
+    <string name="call_other">Call</string>
+    <string name="call_callback">Call callback</string>
+    <string name="call_car">Call car</string>
+    <string name="call_company_main">Call company main</string>
+    <string name="call_isdn">Call ISDN</string>
+    <string name="call_main">Call main</string>
+    <string name="call_other_fax">Call fax</string>
+    <string name="call_radio">Call radio</string>
+    <string name="call_telex">Call telex</string>
+    <string name="call_tty_tdd">Call TTY/TDD</string>
+    <string name="call_work_mobile">Call work mobile</string>
+    <string name="call_work_pager">Call work pager</string>
+    <string name="call_assistant">Call <xliff:g id="assistant">%s</xliff:g></string>
+    <string name="call_mms">Call MMS</string>
+    <string name="sms_custom">Text <xliff:g id="custom">%s</xliff:g></string>
+    <string name="sms_home">Text home</string>
+    <string name="sms_mobile">Text mobile</string>
+    <string name="sms_work">Text work</string>
+    <string name="sms_fax_work">Text work fax</string>
+    <string name="sms_fax_home">Text home fax</string>
+    <string name="sms_pager">Text pager</string>
+    <string name="sms_other">Text</string>
+    <string name="sms_callback">Text callback</string>
+    <string name="sms_car">Text car</string>
+    <string name="sms_company_main">Text company main</string>
+    <string name="sms_isdn">Text ISDN</string>
+    <string name="sms_main">Text main</string>
+    <string name="sms_other_fax">Text fax</string>
+    <string name="sms_radio">Text radio</string>
+    <string name="sms_telex">Text telex</string>
+    <string name="sms_tty_tdd">Text TTY/TDD</string>
+    <string name="sms_work_mobile">Text work mobile</string>
+    <string name="sms_work_pager">Text work pager</string>
+    <string name="sms_assistant">Text <xliff:g id="assistant">%s</xliff:g></string>
+    <string name="sms_mms">Text MMS</string>
+    <string name="sms">Text message</string>
+    <string name="email_home">Email home</string>
+    <string name="email_mobile">Email mobile</string>
+    <string name="email_work">Email work</string>
+    <string name="email_other">Email</string>
+    <string name="email_custom">Email <xliff:g id="custom">%s</xliff:g></string>
+    <string name="email">Email</string>
+    <string name="map_home">View home address</string>
+    <string name="map_work">View work address</string>
+    <string name="map_other">View address</string>
+    <string name="map_custom">View <xliff:g id="custom">%s</xliff:g> address</string>
+    <string name="chat_aim">Chat using AIM</string>
+    <string name="chat_msn">Chat using Windows Live</string>
+    <string name="chat_yahoo">Chat using Yahoo</string>
+    <string name="chat_skype">Chat using Skype</string>
+    <string name="chat_qq">Chat using QQ</string>
+    <string name="chat_gtalk">Chat using Google Talk</string>
+    <string name="chat_icq">Chat using ICQ</string>
+    <string name="chat_jabber">Chat using Jabber</string>
+    <string name="chat">Chat</string>
+    <string name="audio_chat">Voice chat</string>
+    <string name="video_chat">Video chat</string>
+    <string name="postal_address">Address</string>
+    <string name="postal_street">Street</string>
+    <string name="postal_pobox">PO box</string>
+    <string name="postal_neighborhood">Neighborhood</string>
+    <string name="postal_city">City</string>
+    <string name="postal_region">State</string>
+    <string name="postal_postcode">ZIP code</string>
+    <string name="postal_country">Country</string>
+    <string name="full_name">Name</string>
+    <string name="name_given">Given name</string>
+    <string name="name_family">Family name</string>
+    <string name="name_prefix">Name prefix</string>
+    <string name="name_middle">Middle name</string>
+    <string name="name_suffix">Name suffix</string>
+    <string name="name_phonetic_given">Phonetic given name</string>
+    <string name="name_phonetic_middle">Phonetic middle name</string>
+    <string name="name_phonetic_family">Phonetic family name</string>
+    <string name="name_phonetic">Phonetic name</string>
+    <string name="connections">Connections</string>
+    <string name="add_connection_button">Add connection</string>
+    <string name="recent" msgid="2062236709538790412">Recent</string>
+    <string name="recent_updates" msgid="2018245636796411442">Recent updates</string>
+    <string name="account_type_format"><xliff:g id="source" example="Gmail">%1$s</xliff:g> contact</string>
+    <string name="from_account_format"><xliff:g id="source" example="user@gmail.com">%1$s</xliff:g></string>
+    <string name="use_photo_as_primary">Use this photo</string>
+    <string name="contact_read_only">Not editable from this app.</string>
+    <string name="no_contact_details">No additional information for this contact.</string>
+    <string name="group_read_only">Not editable on this device.</string>
+    <string name="display_options_sort_list_by">Sort list by</string>
+    <string name="display_options_sort_by_given_name">Given name</string>
+    <string name="display_options_sort_by_family_name">Family name</string>
+    <string name="display_options_view_names_as">View contact names as</string>
+    <string name="display_options_view_given_name_first">Given name first</string>
+    <string name="display_options_view_family_name_first">Family name first</string>
+    <string name="take_photo">Take photo</string>
+    <string name="take_new_photo">Take new photo</string>
+    <string name="pick_photo">Choose photo from Gallery</string>
+    <string name="pick_new_photo">Select new photo from Gallery</string>
+    <string name="locale_change_in_progress">Contact list is being updated to reflect the change of language.</string>
+    <string name="upgrade_in_progress">Contact list is being updated.</string>
+    <string name="upgrade_out_of_memory">Contacts are in the process of being upgraded.
+        \n\nThe upgrade process requires approximately <xliff:g id="size_in_megabytes">%s</xliff:g>
+        MB of internal storage.\n\nChoose one of the following options:</string>
+    <string name="upgrade_out_of_memory_uninstall">Uninstall some applications</string>
+    <string name="upgrade_out_of_memory_retry">Retry upgrade</string>
+    <string name="search_results_searching">Searching\u2026</string>
+    <string name="menu_display_selected">"Show selected"</string>
+    <string name="menu_display_all">"Show all"</string>
+    <string name="menu_select_all">"Select all"</string>
+    <string name="menu_select_none">"Unselect all"</string>
+    <string name="no_contacts_selected">"No contacts selected."</string>
+    <string name="add_field">Add another field</string>
+    <string name="add_new_entry_for_section">Add new</string>
+    <string name="add_organization">Add organization</string>
+    <string name="event_edit_field_hint_text">Date</string>
+    <string name="group_edit_field_hint_text">Group name</string>
+    <string name="contact_status_update_attribution">via <xliff:g id="source" example="Google Talk">%1$s</xliff:g></string>
+    <string name="contact_status_update_attribution_with_date"><xliff:g id="date" example="3 hours ago">%1$s</xliff:g> via <xliff:g id="source" example="Google Talk">%2$s</xliff:g></string>
+    <string name="description_star">favorite</string>
+    <string name="edit_contact">ערוך איש קשר</string>
+    <string name="local_invisible_directory">Other</string>
+    <string name="aggregation_suggestion_join_dialog_message">Join
+                the current contact with the selected contact?</string>
+    <string name="aggregation_suggestion_edit_dialog_message">Switch to editing
+                the selected contact? Information you entered so far will be copied.</string>
+    <string name="menu_copyContact">Copy to My Contacts</string>
+    <string name="add_to_my_contacts">Add to My Contacts</string>
+    <string name="contact_directory_description">Directory <xliff:g id="type" example="Corporate Directory">%1$s</xliff:g></string>
+    <string name="directory_search_label">Directory</string>
+    <string name="local_search_label">All contacts</string>
+    <string name="toast_making_personal_copy">Creating a personal copy\u2026</string>
+    <string name="list_filter_all_accounts">All contacts</string>
+    <string name="list_filter_all_starred">כיכב</string>
+    <string name="list_filter_custom">Custom</string>
+    <string name="list_filter_customize">Customize</string>
+    <string name="list_filter_phones">All contacts with phone numbers</string>
+    <string name="list_filter_single">איש קשר</string>
+    <string name="custom_list_filter">Define custom view</string>
+    <string name="contact_list_loading">טוען</string>
+    <string name="activity_title_settings">Settings</string>
+    <string name="activity_title_call_stats">Call statistics</string>
+    <string name="activity_title_contacts_filter">Contacts to display</string>
+    <string name="menu_settings" msgid="377929915873428211">Settings</string>
+    <string name="menu_help">Help</string>
+    <string name="preference_displayOptions">Display options</string>
+    <string name="organization_company_and_title"><xliff:g id="company" example="Technical Program Manager">%2$s</xliff:g>, <xliff:g id="company" example="Google Inc.">%1$s</xliff:g></string>
+    <string name="hint_findContacts">Find contacts</string>
+    <string name="non_phone_caption">Phone number</string>
+    <string name="non_phone_add_to_contacts">הוסף לאנשי קשר</string>
+    <string name="activity_title_confirm_add_detail">Add to contact</string>
+    <string name="non_phone_close">Close</string>
+    <string name="widget_name_and_phonetic"><xliff:g id="display_name" example="John Huber">%1$s</xliff:g> (<xliff:g id="phonetic_name">%2$s</xliff:g>)</string>
+    <string name="date_year_toggle">Provide a year</string>
+    <string name="social_widget_label">איש קשר</string>
+    <string name="social_widget_loading">טוען</string>
+    <string name="contacts_unavailable_create_contact">Create a new contact</string>
+    <string name="contacts_unavailable_add_account">Sign in to an account</string>
+    <string name="contacts_unavailable_import_contacts">Import contacts</string>
+    <string name="create_group_dialog_title">Create new group</string>
+    <string name="create_group_item_label">Create new group</string>
+    <string name="delete_group_dialog_message">Delete the group
+            \"<xliff:g id="group_label" example="Friends">%1$s</xliff:g>\"?
+            (Contacts themselves will not be deleted.)
+        </string>
+    <string name="toast_join_with_empty_contact">Type contact name before joining
+            with another.
+        </string>
+    <string name="copy_text">Copy to clipboard</string>
+    <string name="set_default">Set default</string>
+    <string name="clear_default">Clear default</string>
+    <string name="toast_text_copied">Text copied</string>
+    <string name="cancel_confirmation_dialog_message">Discard your changes?</string>
+    <string name="call_type_and_date">
+                <xliff:g id="call_type" example="Friends">%1$s</xliff:g>    <xliff:g id="call_short_date" example="Friends">%2$s</xliff:g>
+        </string>
+    <string name="profile_display_name">Set up my profile</string>
+    <string name="enter_contact_name">Type person\'s name</string>
+    <string name="view_updates_from_group">View updates</string>
+    <string name="notification_action_voicemail_play">Play</string>
+    <string name="notification_voicemail_callers_list"><xliff:g id="newer_callers">%1$s</xliff:g>, <xliff:g id="older_caller">%2$s</xliff:g></string>
+    <string name="notification_new_voicemail_ticker">New voicemail from <xliff:g id="caller">%1$s</xliff:g></string>
+    <string name="voicemail_playback_error">Couldn\'t play voicemail.</string>
+    <string name="voicemail_buffering">Buffering\u2026</string>
+    <string name="voicemail_fetching_content">Fetching voicemail\u2026</string>
+    <string name="voicemail_fetching_timout">Couldn\'t fetch voicemail.</string>
+    <string name="call_log_new_header">New</string>
+    <string name="call_log_old_header">Older</string>
+    <string name="call_log_voicemail_header">Calls with voicemail only</string>
+    <string name="call_log_incoming_header">Incoming calls only</string>
+    <string name="call_log_outgoing_header">Outgoing calls only</string>
+    <string name="call_log_missed_header">Missed calls only</string>
+    <string name="voicemail_status_voicemail_not_available">Can\'t connect to voicemail server.</string>
+    <string name="voicemail_status_messages_waiting">Can\'t connect to voicemail server. New voicemails are waiting.</string>
+    <string name="voicemail_status_configure_voicemail">Set up your voicemail.</string>
+    <string name="voicemail_status_audio_not_available">Audio not available.</string>
+    <string name="voicemail_status_action_configure">Set up</string>
+    <string name="voicemail_status_action_call_server">Call voicemail</string>
+    <string name="voicemail_speed_slowest">Slowest speed</string>
+    <string name="voicemail_speed_slower">Slow speed</string>
+    <string name="voicemail_speed_normal">Normal speed</string>
+    <string name="voicemail_speed_faster">Fast speed</string>
+    <string name="voicemail_speed_fastest">Fastest speed</string>
+    <string name="call_log_item_count_and_date">(<xliff:g id="count">%1$d</xliff:g>) <xliff:g id="date">%2$s</xliff:g></string>
+    <string name="group_name_hint">Group\'s name</string>
+    <string name="nfc_vcard_file_name">Contact received over NFC</string>
+    <string name="menu_show_outgoing_only">Show outgoing only</string>
+    <string name="menu_show_incoming_only">Show incoming only</string>
+    <string name="menu_show_missed_only">Show missed only</string>
+    <string name="menu_show_voicemails_only">Show voicemails only</string>
+    <string name="menu_show_all_calls">Show all calls</string>
+    <string name="status_available">Available</string>
+    <string name="status_away">Away</string>
+    <string name="status_busy">Busy</string>
+    <string name="description_call_log_play_button">Play voicemail</string>
+    <string name="description_call_log_incoming_call">Incoming call</string>
+    <string name="description_call_log_outgoing_call">Outgoing call</string>
+    <string name="description_call_log_missed_call">Missed call</string>
+    <string name="description_call_log_voicemail">Voicemail</string>
+    <string name="description_add_contact">Add contact</string>
+    <string name="description_view_contact">View contact <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="description_call">Call <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="description_send_text_message">Send text message to <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="description_call_log_unheard_voicemail">Unheard voicemail</string>
+    <string name="description_send_message">Send message to <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="description_dial_phone_number">Dial phone <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="description_quick_contact_for">Quick contact for <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="call_log_empty_gecode">-</string>
+    <string name="user_profile_contacts_list_header" msgid="9154761216179882405">Me</string>
+    <string name="local_profile_title">My local profile</string>
+    <string name="external_profile_title">My <xliff:g id="external_source">%1$s</xliff:g> profile</string>
+    <string name="toast_displaying_all_contacts">Displaying all contacts</string>
+    <string name="no_account_prompt">People works better with a Google Account.\n\n\u2022 Access from any web browser.\n\u2022 Back up your contacts securely.</string>
+    <string name="generic_no_account_prompt">Keep your contacts safe even if you lose your phone: synchronize with an online service.</string>
+    <string name="generic_no_account_prompt_title">Add an account</string>
+    <string name="contact_editor_prompt_zero_accounts">Your new contact won\'t be backed up. Add an account that backs up contacts online?</string>
+    <string name="contact_editor_prompt_one_account">Your new contact will be synchronized with <xliff:g id="account_name">%1$s</xliff:g>.</string>
+    <string name="contact_editor_prompt_multiple_accounts">You can synchronize your new contact with one of the following accounts. Which do you want to use?</string>
+    <string name="keep_local">Keep local</string>
+    <string name="add_account">Add account</string>
+    <string name="add_new_account">Add new account</string>
+    <string name="dialog_phone_call_prohibited_message" msgid="4313552620858880999">Call not sent</string>
+    <string name="dialog_voicemail_not_ready_message">To set up voicemail, go to Menu &gt; Settings.</string>
+    <string name="dialog_voicemail_airplane_mode_message">To call voicemail, first turn off Airplane mode.</string>
+    <string name="menu_export_database">Export database files</string>
+    <string name="action_menu_overflow_description" msgid="2295659037509008453">More options</string>
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current dialled contact</string>
+    <string name="call_stats_nav_all">All</string>
+    <string name="call_stats_nav_incoming">Incoming</string>
+    <string name="call_stats_nav_outgoing">Outgoing</string>
+    <string name="call_stats_nav_missed">Missed</string>
+    <string name="call_stats_incoming">Incoming: <xliff:g id="percent">%d</xliff:g>%%</string>
+    <string name="call_stats_outgoing">Outgoing: <xliff:g id="percent">%d</xliff:g>%%</string>
+    <string name="call_stats_missed">Missed</string>
+    <string name="call_stats_missed_percent">Missed: <xliff:g id="percent">%d</xliff:g>%%</string>
+    <string name="call_stats_header_total">Total: <xliff:g id="call_count">%s</xliff:g>, <xliff:g id="duration">%s</xliff:g></string>
+    <string name="call_stats_header_total_callsonly">Total: <xliff:g id="call_count">%s</xliff:g></string>
+    <string name="call_stats_filter_from">Start date</string>
+    <string name="call_stats_filter_to">End date</string>
+    <string name="call_stats_filter_picker_title">Filter range</string>
+    <string name="date_quick_selection">Quick selection</string>
+    <string name="date_qs_currentmonth">Current month</string>
+    <string name="date_qs_currentquarter">Current quarter</string>
+    <string name="date_qs_currentyear">Current year</string>
+    <string name="date_qs_lastweek">Last week</string>
+    <string name="date_qs_lastmonth">Last month</string>
+    <string name="date_qs_lastquarter">Last quarter</string>
+    <string name="date_qs_lastyear">Last year</string>
+    <string name="call_stats_date_filter">Adjust time range</string>
+    <string name="call_stats_reset_filter">Reset time range</string>
+    <string name="call_stats_sort_by_duration">Sort by call duration</string>
+    <string name="call_stats_sort_by_count">Sort by call count</string>
+    <string name="expand_collapse_name_fields_description">Expand or collapse name fields</string>
+    <string-array name="otherLabels">
+        <item>Organization</item>
+        <item>Note</item>
+    </string-array>
+    <string-array name="call_stats_duration">
+        <item><xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g> <xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g> <xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g> <xliff:g id="minutes" example="2 mins">%2$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g> <xliff:g id="minutes" example="2 mins">%2$s</xliff:g> <xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+    </string-array>
+</resources>
