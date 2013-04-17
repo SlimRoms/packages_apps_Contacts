@@ -402,7 +402,7 @@
     <string name="recent" msgid="2659189233141493004">"Недавние"</string>
     <string name="recent_updates" msgid="4267258535615860710">"Недавние обновления"</string>
     <string name="account_type_format" msgid="718948015590343010">"Контакт <xliff:g id="SOURCE">%1$s</xliff:g>"</string>
-	<string name="from_account_format"><xliff:g id="source" example="user@gmail.com">%1$s</xliff:g></string>
+    <string name="from_account_format"><xliff:g id="source" example="user@gmail.com">%1$s</xliff:g></string>
     <!-- no translation found for from_account_format (4469138575127580203) -->
     <skip />
     <string name="use_photo_as_primary" msgid="8807110122951157246">"Использовать эту фотографию"</string>
@@ -646,10 +646,10 @@
          Middle Name, Last Name, Name Suffix).
          [CHAR LIMIT=NONE] -->
     <string name="expand_collapse_name_fields_description">Развернуть/свернуть поле ввода имени</string>
-	
-	<!-- Blacklist functions -->
-	<string name="menu_add_to_blacklist">Добавить в черный список</string>
-	<string name="toast_added_to_blacklist">%s добавлен в черный список.</string>
+    
+    <!-- Blacklist functions -->
+    <string name="menu_add_to_blacklist">Добавить в черный список</string>
+    <string name="toast_added_to_blacklist">%s добавлен в черный список.</string>
 
     <string name="t9_sort_title">Режим сортировки T9</string>
     <string name="t9_sort_summary">Выберите способ отображения результатов</string>
