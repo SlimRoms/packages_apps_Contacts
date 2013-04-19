@@ -387,7 +387,7 @@
     <string name="recent" msgid="2062236709538790412">Reciente</string>
     <string name="recent_updates" msgid="2018245636796411442">Actualizaciones recientes</string>
     <string name="account_type_format">Contacto de <xliff:g id="SOURCE">%1$s</xliff:g></string>
-    <string name="from_account_format"><xliff:g id="source" example="user@gmail.com"> %1$ s </xliff:g></string>
+    <string name="from_account_format"><xliff:g id="source" example="user@gmail.com"> %1$s </xliff:g></string>
     <string name="use_photo_as_primary">Utilizar esta foto</string>
     <string name="contact_read_only">No se puede editar desde la aplicación.</string>
     <string name="no_contact_details">No hay información adicional para este contacto.</string>
@@ -571,13 +571,13 @@
         <item>Nota</item>
     </string-array>
     <string-array name="call_stats_duration">
-        <item><xliff:g id="seconds" example="2 secs"> %3$ s </xliff:g></item>
-        <item><xliff:g id="minutes" example="2 mins"> %2$ s </xliff:g></item>
-        <item><xliff:g id="minutes" example="2 mins"> %2$ s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$ s </xliff:g></item>
-        <item><xliff:g id="hours" example="2 hrs"> %1$ s </xliff:g></item>
-        <item><xliff:g id="hours" example="2 hrs"> %1$ s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$ s </xliff:g></item>
-        <item><xliff:g id="hours" example="2 hrs"> %1$ s </xliff:g> <xliff:g id="minutes" example="2 mins"> %2$ s </xliff:g></item>
-        <item><xliff:g id="hours" example="2 hrs"> %1$ s </xliff:g> <xliff:g id="minutes" example="2 mins"> %2$ s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$ s </xliff:g></item>
+        <item><xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins"> %2$s </xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins"> %2$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs"> %1$s </xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs"> %1$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs"> %1$s </xliff:g> <xliff:g id="minutes" example="2 mins"> %2$s </xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs"> %1$s </xliff:g> <xliff:g id="minutes" example="2 mins"> %2$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
     </string-array>
     <plurals name="listTotalPhoneContacts">
         <item quantity="one">Un (1) contacto con número de teléfono</item>
