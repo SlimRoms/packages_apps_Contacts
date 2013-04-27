@@ -608,14 +608,18 @@
     </plurals>
     <plurals name="hour">
         <item quantity="one">1 time</item>
+        <item quantity="other">%d timer</item>
     </plurals>
     <plurals name="minute">
         <item quantity="one">1 min</item>
+        <item quantity="other">%d min</item>
     </plurals>
     <plurals name="second">
         <item quantity="one">1 sek</item>
+        <item quantity="other">%d sek</item>
     </plurals>
     <plurals name="call">
-        <item quantity="one">1 opkald</item>
+        <item quantity="one">1 opringning</item>
+        <item quantity="other">%d opringninger</item>
     </plurals>
 </resources>

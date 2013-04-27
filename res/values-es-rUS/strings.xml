@@ -630,9 +630,7 @@
         <item quantity="other">1 segundo</item>
     </plurals>
     <plurals name="call">
-        <item quantity="one">1 llamada
-%d llamadas</item>
-        <item quantity="other">1 llamada
-%d llamadas</item>
+        <item quantity="one">1 llamada</item>
+        <item quantity="other">%d llamadas</item>
     </plurals>
 </resources>

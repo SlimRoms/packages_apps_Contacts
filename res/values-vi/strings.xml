@@ -571,51 +571,12 @@
         <item>Ghi chú</item>
     </string-array>
     <string-array name="call_stats_duration">
-        <item><xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
-        <item><xliff:g id="minutes" example="2 mins"> %2$s </xliff:g></item>
-        <item><xliff:g id="minutes" example="2 mins"> %2$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
-        <item><xliff:g id="hours" example="2 hrs"> %1$s </xliff:g></item>
-        <item><xliff:g id="minutes" example="2 mins"> %1$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
-        <item><xliff:g id="minutes" example="2 mins"> %1$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %2$s </xliff:g></item>
-        <item><xliff:g id="hours" example="2 hrs"> %1$s </xliff:g> <xliff:g id="minutes" example="2 mins"> %2$s </xliff:g> <xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
+        <item><xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%2$s</xliff:g><xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%1$s</xliff:g><xliff:g id="seconds" example="2 secs">%3$s</xliff:g></item>
+        <item><xliff:g id="minutes" example="2 mins">%1$s</xliff:g><xliff:g id="seconds" example="2 secs">%2$s</xliff:g></item>
+        <item><xliff:g id="hours" example="2 hrs">%1$s</xliff:g><xliff:g id="minutes" example="2 mins">%2$s</xliff:g><xliff:g id="seconds" example="2 secs"> %3$s </xliff:g></item>
     </string-array>
-    <plurals name="listTotalPhoneContacts">
-        <item quantity="other">1 liên hệ có số điện thoại</item>
-    </plurals>
-    <plurals name="listTotalAllContacts">
-        <item quantity="other">1 địa chỉ liên hệ</item>
-    </plurals>
-    <plurals name="listFoundAllContacts">
-        <item quantity="other">Đã tìm thấy 1</item>
-    </plurals>
-    <plurals name="searchFoundContacts">
-        <item quantity="other">Đã tìm thấy 1</item>
-    </plurals>
-    <plurals name="merge_info">
-        <item quantity="other">chưa được hợp nhất</item>
-    </plurals>
-    <plurals name="num_groups_in_account">
-        <item quantity="other">1 nhóm</item>
-    </plurals>
-    <plurals name="num_contacts_in_group">
-        <item quantity="other"><xliff:g id="COUNT_0">%1$d</xliff:g> người từ <xliff:g id="ACCOUNT_TYPE">%2$s</xliff:g></item>
-    </plurals>
-    <plurals name="group_list_num_contacts_in_group">
-        <item quantity="other"><xliff:g id="COUNT">%1$d</xliff:g> người</item>
-    </plurals>
-    <plurals name="notification_voicemail_title">
-        <item quantity="other">Thư thoại</item>
-    </plurals>
-    <plurals name="hour">
-        <item quantity="other">1 giờ</item>
-    </plurals>
-    <plurals name="minute">
-        <item quantity="other">1 phút</item>
-    </plurals>
-    <plurals name="second">
-        <item quantity="other">1 giây</item>
-    </plurals>
-    <plurals name="call">
-        <item quantity="other">1 cuộc gọi</item>
-    </plurals>
 </resources>

@@ -621,11 +621,11 @@
     </plurals>
     <plurals name="minute">
         <item quantity="one">1 min</item>
-        <item quantity="other">1 min</item>
+        <item quantity="other">%d min</item>
     </plurals>
     <plurals name="second">
         <item quantity="one">1 seg</item>
-        <item quantity="other">1 seg</item>
+        <item quantity="other">%d seg</item>
     </plurals>
     <plurals name="call">
         <item quantity="one">1 llamada</item>

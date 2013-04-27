@@ -640,15 +640,19 @@
         <item quantity="other"><xliff:g id="COUNT">%1$d</xliff:g> balso pašto pranešim.</item>
     </plurals>
     <plurals name="hour">
-        <item quantity="one">1 val</item>
+        <item quantity="one">1 valanda</item>
+        <item quantity="other">%d pamoka</item>
     </plurals>
     <plurals name="minute">
         <item quantity="one">1 min</item>
+        <item quantity="other">%d min</item>
     </plurals>
     <plurals name="second">
         <item quantity="one">1 s</item>
+        <item quantity="other">%d s</item>
     </plurals>
     <plurals name="call">
         <item quantity="one">1 skambutis</item>
+        <item quantity="other">%d skambinti</item>
     </plurals>
 </resources>
