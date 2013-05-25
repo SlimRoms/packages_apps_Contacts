@@ -1422,6 +1422,8 @@ public class DialpadFragment extends Fragment
                 // contains a *formatted* version of mLastNumberDialed (due to
                 // mTextWatcher) and its length may have changed.
                 mDigits.setSelection(mDigits.getText().length());
+
+                // Retrigger T9 search to show the matching contact if present
                 searchContacts();
             } else {
                 // There's no "last number dialed" or the
