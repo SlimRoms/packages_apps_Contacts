@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2013 SlimRoms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <color name="quickcontact_list_divider">#ff323232</color>
+    <color name="quickcontact_list_background">#ff1d1d1d</color>
+    <color name="quickcontact_tab_indicator">#ff393939</color>
+    <color name="quickcontact_track_background">#ff0a0a0a</color>
+    <color name="quickcontact_activity_background">#ff0a0a0a</color>
+    <color name="quickcontact_name_detail_background">#66ffffff</color>
+
+    <!-- Color of the background of the contact detail and editor pages -->
+    <color name="background_primary">#000000</color>
+
+    <color name="background_social_updates">#ff181818</color>
+
+    <!-- Color used for the letter in the A-Z section header -->
+    <color name="section_header_text_color">#c9c9c9</color>
+
+    <!-- Color of the text in the updates tab in the tab carousel on the contact detail page -->
+    <color name="detail_update_tab_text_color">#888888</color>
+
+    <!-- Color of the text of the tab carousel in the contact details  -->
+    <color name="detail_tab_carousel_tab_label_color">#111111</color>
+
+    <!-- Color of the background of the action bar -->
+    <color name="action_bar_background">#222222</color>
+
+    <!-- Color of the background of the action bar when highlighted (ie. pressed, focused) -->
+    <color name="action_bar_background_highlight">#313131</color>
+
+    <!-- Color of the text for buttons in the action bar  -->
+    <color name="action_bar_button_text_color">#000000</color>
+
+    <!--  Color of the vertical stripe that goes on the left of a block quote inside a stream item -->
+    <color name="stream_item_stripe_color">#333333</color>
+
+    <!-- Background color from layout  -->
+    <color name="editor_account_header_bg">#181818</color>
+
+</resources>
