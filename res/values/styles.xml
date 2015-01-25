@@ -63,8 +63,8 @@
         <item name="android:actionModeCloseDrawable">@drawable/ic_close_lt</item>
         <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb</item>
         <item name="android:fastScrollTrackDrawable">@null</item>
-        <item name="android:textColorPrimary">@color/primary_text_color</item>
-        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:textColorPrimary">@color/exposed_primary_text_light</item>
+        <item name="android:textColorSecondary">@color/exposed_secondary_text_light</item>
         <item name="android:icon">@android:color/transparent</item>
         <item name="android:listViewStyle">@style/ListViewStyle</item>
         <item name="android:windowBackground">@color/background_primary</item>
@@ -76,13 +76,11 @@
         <item name="activated_background">@drawable/list_item_activated_background</item>
         <item name="section_header_background">@drawable/list_title_holo</item>
         <item name="list_section_header_height">24dip</item>
-        <item name="list_item_padding_top">
-            @dimen/contact_browser_list_item_padding_top_or_bottom
-        </item>
+        <item name="list_item_padding_top">@dimen/contact_browser_list_item_padding_top_or_bottom</item>
         <item name="list_item_padding_right">32dp</item>
-        <item name="list_item_padding_bottom">
-            @dimen/contact_browser_list_item_padding_top_or_bottom
-        </item>
+        <item name="list_item_padding_bottom">@dimen/contact_browser_list_item_padding_top_or_bottom</item>
+	<!-- added for contacts list text for theming "Thyrus" -->
+	<item name="list_item_name_text_color">@color/exposed_contact_list_name_text_color</item>
         <item name="list_item_padding_left">16dip</item>
         <item name="list_item_gap_between_image_and_text">
             @dimen/contact_browser_list_item_gap_between_image_and_text
@@ -118,6 +116,7 @@
         <item name="android:background">@color/actionbar_background_color</item>
         <item name="android:titleTextStyle">@style/ContactsActionBarTitleText</item>
         <item name="android:backgroundStacked">@color/actionbar_background_color</item>
+	
         <!-- Empty icon -->
         <item name="android:icon">@android:color/transparent</item>
     </style>
@@ -137,18 +136,19 @@
         <!-- when first loading, don't show title or up button -->
         <item name="android:displayOptions"></item>
     </style>
-
+    <!-- exposed textcolor for theming  -->
     <style name="ContactPickerSearchTheme" parent="@style/PeopleTheme">
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorPrimary">@color/exposed_primary_text_dark</item>
         <item name="android:textColorHint">?android:textColorHintInverse</item>
         <item name="android:colorControlActivated">?android:textColorHintInverse</item>
-        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="android:colorControlNormal">@color/exposed_bg_dark</item>
     </style>
 
     <!-- Text in the action bar at the top of the screen -->
     <style name="ContactsActionBarTitleText"
            parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/actionbar_text_color</item>
+      <!-- exposed textcolor for theming  -->
+        <item name="android:textColor">@color/exposed_ContactsActionBarTitleText</item>
     </style>
 
     <!-- Styling for the tab bar; handles styling of the divider line. -->
@@ -160,7 +160,8 @@
     <!-- Text style for tabs. -->
     <style name="ContactsActionBarTabTextStyle"
            parent="android:style/Widget.Material.Light.ActionBar.TabText">
-        <item name="android:textColor">@color/tab_text_color</item>
+      <!-- exposed textcolor for theming  -->
+        <item name="android:textColor">@color/exposed_ContactsActionBarTabTextStyle</item>
         <item name="android:textSize">@dimen/tab_text_size</item>
         <item name="android:fontFamily">@string/tab_font_family</item>
         <item name="android:textStyle">bold</item>
@@ -177,8 +178,9 @@
     </style>
 
     <style name="ContactsActionBarTheme" parent="@android:style/Theme.Holo.Light">
-        <item name="android:textColorHint">#CCCCCC</item>
-        <item name="android:textColor">@android:color/black</item>
+      <!-- exposed textcolor for theming  -->
+        <item name="android:textColorHint">@color/exposed_ContactsActionBarTheme_hint</item>
+        <item name="android:textColor">@color/exposed_ContactsActionBarTheme_text</item>
         <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
         <item name="android:dropDownListViewStyle">@style/ListViewDropdownStyle</item>
     </style>
@@ -216,13 +218,15 @@
 
     <style name="ContactEditorAccountsChangedActivityTheme" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:textColorPrimary">@color/primary_text_color</item>
-        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+	<!-- exposed textcolor for theming  -->
+        <item name="android:textColorPrimary">@color/exposed_primary_text_light</item>
+        <item name="android:textColorSecondary">@color/exposed_secondary_text_light</item>
         <item name="android:listViewStyle">@style/ListViewStyle</item>
     </style>
 
     <style name="SectionDivider">
-        <item name="android:background">#7e7e87</item>
+      <!-- exposed Section divider for theming  -->
+        <item name="android:background">@color/exposed_SectionDivider</item>
         <item name="android:layout_height">1dip</item>
         <item name="android:layout_width">match_parent</item>
     </style>
@@ -266,12 +270,14 @@
     <style name="GroupMembershipSizeTextAppearance" parent="@android:style/TextAppearance.Small"/>
 
     <style name="PeopleNavigationDropDownTextAppearance">
-        <item name="android:textColor">@color/primary_text_color</item>
+      <!-- exposed textcolor for theming  -->
+        <item name="android:textColor">@color/exposed_primary_text_light</item>
         <item name="android:textSize">18sp</item>
     </style>
 
     <style name="PeopleNavigationDropDownHeaderTextAppearance">
-        <item name="android:textColor">@color/primary_text_color</item>
+      <!-- exposed textcolor for theming  -->
+        <item name="android:textColor">@color/exposed_primary_text_light</item>
         <item name="android:textSize">18sp</item>
     </style>
 
@@ -304,13 +310,15 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">#363636</item>
+	<!-- exposed textcolor for theming  -->
+        <item name="android:textColor">@color/exposed_EditKindTextAppearanceStyle</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <!-- Inherit from Theme.Material.Light.Dialog instead of Theme.Material.Light.Dialog.Alert
         since the Alert dialog is private. They are identical anyway. -->
     <style name="ContactsAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
+      <!-- exposed accent color for theming  -->
         <item name="android:colorAccent">@color/primary_color</item>
     </style>
 
