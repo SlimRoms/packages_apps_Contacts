@@ -54,4 +54,20 @@
 
     <!-- Background color of pinned header items. -->
     <color name="list_item_pinned_header_color">@color/background_primary</color>
+
+    <!-- Exposed resources for theming -->
+    <color name="exposed_bg_dark">#ffffffff</color>
+    <color name="exposed_bg_light">#ff000000</color>
+    <color name="exposed_primary_text_light">#de000000</color>
+    <color name="exposed_secondary_text_light">#8a000000</color>
+    <color name="exposed_primary_text_dark">#ffffffff</color>
+    <color name="exposed_secondary_text_dark">#b3ffffff</color>
+    <color name="exposed_ContactsActionBarTheme_hint">#CCCCCC</color>
+    <color name="exposed_ContactsActionBarTheme_text">#ff000000</color>
+    <color name="exposed_EditKindTextAppearanceStyle">#363636</color>
+    <color name="exposed_ContactsActionBarTitleText">#ffffffff</color>
+    <color name="exposed_ContactsActionBarTabTextStyle">#ffffffff</color>
+    <color name="exposed_SectionDivider">#7e7e87</color>
+    <color name="exposed_contact_list_name_text_color">#ff212121</color>
+    <color name="Widget.Material.Light.Button_TS">#555555</color>
 </resources>
