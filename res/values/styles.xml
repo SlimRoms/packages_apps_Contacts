@@ -49,7 +49,16 @@
         <item name="android:actionBarItemBackground">@drawable/item_background_material_borderless_dark</item>
     </style>
 
-    <style name="PeopleTheme" parent="@android:style/Theme.Material.Light">
+        <!-- Thyrus: Split People style  to enable main style to be themeable -->
+    <style name="PeopleTheme1" parent="@android:style/Theme.Material.Light">
+        <item name="android:textColorPrimary">@color/exposed_primary_text_light</item>
+        <item name="android:textColorSecondary">@color/exposed_secondary_text_light</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:colorPrimary">@color/primary_color</item>
+        <item name="android:colorPrimaryDark">@color/primary_color_dark</item>
+        <item name="android:colorAccent">@color/primary_color</item>
+        </style>
+        <style name="PeopleTheme" parent="@style/PeopleTheme1">
         <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
         <!-- Style for the tab bar (for the divider between tabs) -->
         <item name="android:actionBarTabBarStyle">@style/ContactsActionBarTabBarStyle</item>
@@ -60,14 +69,8 @@
         <!-- Style for the overflow button in the actionbar. -->
         <item name="android:actionOverflowButtonStyle">@style/ContactsActionBarOverflowQP</item>
         <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb</item>
-        <item name="android:textColorPrimary">@color/exposed_primary_text_light</item>
-        <item name="android:textColorSecondary">@color/exposed_secondary_text_light</item>
         <item name="android:icon">@android:color/transparent</item>
         <item name="android:listViewStyle">@style/ListViewStyle</item>
-        <item name="android:windowBackground">@color/background_primary</item>
-        <item name="android:colorPrimaryDark">@color/primary_color_dark</item>
-        <item name="android:colorPrimary">@color/primary_color</item>
-        <item name="android:colorAccent">@color/primary_color</item>
         <item name="android:alertDialogTheme">@style/ContactsAlertDialogTheme</item>
         <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
         <item name="activated_background">@drawable/list_item_activated_background</item>
@@ -79,9 +82,7 @@
         <!-- added for contacts list text for theming "Thyrus" -->
         <item name="list_item_name_text_color">@color/exposed_contact_list_name_text_color</item>
         <item name="list_item_padding_left">16dip</item>
-        <item name="list_item_gap_between_image_and_text">
-            @dimen/contact_browser_list_item_gap_between_image_and_text
-        </item>
+        <item name="list_item_gap_between_image_and_text">@dimen/contact_browser_list_item_gap_between_image_and_text</item>
         <item name="list_item_gap_between_label_and_data">5dip</item>
         <item name="list_item_presence_icon_margin">4dip</item>
         <item name="list_item_presence_icon_size">16dip</item>
@@ -314,6 +315,6 @@
         since the Alert dialog is private. They are identical anyway. -->
     <style name="ContactsAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
       <!-- exposed accent color for theming  -->
-        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:colorAccent">@color/contacts_accent_color</item>
     </style>
 </resources>
