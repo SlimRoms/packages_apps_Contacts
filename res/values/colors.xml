@@ -74,4 +74,7 @@
     <color name="exposed_SectionDivider">#7e7e87</color>
     <color name="exposed_contact_list_name_text_color">#ff212121</color>
     <color name="Widget.Material.Light.Button_TS">#555555</color>
+
+    <!-- Exposed bg color for the account BG when creating a new contact -->
+    <color name="exposed_account_header_bg">#ffeeeeee</color>
 </resources>
