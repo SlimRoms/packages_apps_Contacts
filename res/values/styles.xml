@@ -15,7 +15,7 @@
 -->
 <resources>
 
-    <style name="DetailActivityTheme" parent="@android:style/Theme.Holo.Light">
+    <style name="DetailActivityTheme" parent="@android:style/Theme.Material.DayNight">
         <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_menu_back</item>
         <item name="android:actionOverflowButtonStyle">@style/ContactsActionBarOverflow</item>
@@ -50,7 +50,7 @@
         <item name="android:actionBarItemBackground">@drawable/item_background_material_borderless_dark</item>
     </style>
 
-    <style name="PeopleTheme" parent="@android:style/Theme.Material.Light">
+    <style name="PeopleTheme" parent="@android:style/Theme.Material.DayNight">
         <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
         <!-- Style for the tab bar (for the divider between tabs) -->
         <item name="android:actionBarTabBarStyle">@style/ContactsActionBarTabBarStyle</item>
@@ -176,7 +176,7 @@
         <item name="android:background">@drawable/ab_dropdown_navigation_item_background</item>
     </style>
 
-    <style name="ContactsActionBarTheme" parent="@android:style/Theme.Holo.Light">
+    <style name="ContactsActionBarTheme" parent="@android:style/Theme.Material.DayNight">
         <item name="android:textColorHint">#CCCCCC</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
@@ -207,14 +207,14 @@
     <style name="NonPhoneActivityTheme" parent="@android:Theme.Translucent.NoTitleBar">
     </style>
 
-    <style name="NonPhoneDialogTheme" parent="@android:Theme.Material.Light.Dialog">
+    <style name="NonPhoneDialogTheme" parent="@android:Theme.Material.DayNight.Dialog">
     </style>
 
-    <style name="ConfirmAddDetailDialogTheme" parent="@android:style/Theme.Material.Light.Dialog.MinWidth">
+    <style name="ConfirmAddDetailDialogTheme" parent="@android:style/Theme.Material.DayNight.Dialog.MinWidth">
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
-    <style name="ContactEditorAccountsChangedActivityTheme" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
+    <style name="ContactEditorAccountsChangedActivityTheme" parent="@android:style/Theme.Material.DayNight.Dialog.NoActionBar.MinWidth">
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:textColorPrimary">@color/primary_text_color</item>
         <item name="android:textColorSecondary">@color/secondary_text_color</item>
@@ -238,7 +238,7 @@
         <item name="android:layout_height">150dip</item>
     </style>
 
-    <style name="SelectableItem" parent="@android:style/Theme.Material.Light">
+    <style name="SelectableItem" parent="@android:style/Theme.Material.DayNight">
         <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
 
@@ -254,7 +254,7 @@
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="Theme.PhotoSelector" parent="@android:style/Theme.Holo.Light">
+    <style name="Theme.PhotoSelector" parent="@android:style/Theme.Material.DayNight">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -311,7 +311,7 @@
 
     <!-- Inherit from Theme.Material.Light.Dialog instead of Theme.Material.Light.Dialog.Alert
         since the Alert dialog is private. They are identical anyway. -->
-    <style name="ContactsAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
+    <style name="ContactsAlertDialogTheme" parent="@android:style/Theme.Material.DayNight.Dialog">
         <item name="android:colorAccent">@color/primary_color</item>
     </style>
 
